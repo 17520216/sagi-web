@@ -1,0 +1,7 @@
+@function photoshop-unit-convertsion($unit, $return: 'rem', $base: '16') {
+    @if $return = 'em' {
+        @return ($unit) / 1000;
+    } @else {
+        @return ($unit * $base) / 1000;
+    }
+}

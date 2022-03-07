@@ -1,0 +1,88 @@
+/* ------------------------------------------------------ */
+/*                         Layout                         */
+/* ------------------------------------------------------ */
+$container-max-width: 100%;
+$container-width: 1250px;
+
+/* ------------------------------------------------------ */
+/*                       Responsive                       */
+/* ------------------------------------------------------ */
+/*
+    - XXS: Small Mobile
+    - XS: Mobile
+    - SM: Tablet
+    - MD: Desktop
+    - LG: Large Desktop
+*/
+$xxs-min: 576px;
+$xs-min: 768px;
+$sm-min: 992px;
+$md-min: 1200px;
+$lg-min: 1600px;
+
+$xxs-max: ($xxs-min - 1);
+$xs-max: ($xs-min - 1);
+$sm-max: ($sm-min - 1);
+$md-max: ($md-min - 1);
+$lg-max: ($lg-min - 1);
+
+/* ------------------------------------------------------ */
+/*                         General                        */
+/* ------------------------------------------------------ */
+$t: 0.3s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+$height-header: 78px;
+$padding-section: 150px;
+$fs-body: 16px;
+$gap: 30px;
+
+/* ------------------------------------------------------ */
+/*                          Fonts                         */
+/* ------------------------------------------------------ */
+$font-pn: 'PN', sans-serif;
+$font-pn-eb: 'PN-ExtraBold', sans-serif;
+$font-pn-b: 'PN-Bold', sans-serif;
+
+/* ------------------------------------------------------ */
+/*                          Color                         */
+/* ------------------------------------------------------ */
+$color-black: #000;
+$color-white: #fff;
+$color-primary: #bea67c;
+$color-dark: #0e0e0e;
+$color-dark-v1: #161616;
+
+/* ------------------------------------------------------ */
+/*                       Text Color                       */
+/* ------------------------------------------------------ */
+$tcl-heading: #F0F0F0;
+$tcl-primary: #bea67c;
+$tcl-body: #464646;
+$tcl-black: #000000;
+$tcl-white: #fff;
+$tcl-light: #b0b0b0;
+
+/* ------------------------------------------------------ */
+/*                        Root Font                       */
+/* ------------------------------------------------------ */
+:root {
+    --fs-body: 1.6rem;
+    --lh-body: 2.2rem;
+
+    --fs-nav: 1.5rem;
+
+    --fs-h1: 8.4rem;
+    --lh-h1: 8.4rem;
+
+    --fs-h2: 4rem;
+    --lh-h2: 8.4rem;
+
+    --fs-t42: 4.2rem;
+    --fs-t18: 1.8rem;
+    --fs-t14: 1.4rem;
+    --fs-t12: 1.2rem;
+
+    --lh-24: 24px;
+
+    --height-header: #{$height-header};
+}

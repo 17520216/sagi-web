@@ -1,0 +1,13 @@
+.loading {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: $color-dark;
+    z-index: 999;
+    @include visible(true);
+    @include transition(0.8s);
+    &.--show {
+        @include visible;
+        @include transition(0.8s);
+    }
+}

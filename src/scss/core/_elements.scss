@@ -1,0 +1,132 @@
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.--py {
+    padding: 90px 0;
+    @include xs {
+        padding: 60px 0;
+    }
+}
+.--pt {
+    padding-top: 90px;
+    @include xs {
+        padding-top: 60px;
+    }
+}
+
+.--opacity {
+    opacity: 0;
+}
+
+@include keyframes(fadeMouse) {
+    to {
+        opacity: 0;
+    }
+    from {
+        opacity: 1;
+    }
+}
+
+@include keyframes(fadeDown) {
+    to {
+        opacity: 1;
+        top: 0;
+    }
+    from {
+        opacity: 0;
+        top: 2rem;
+    }
+}
+
+.modal {
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    z-index: 888;
+    @include size(100%, 100vh);
+    top: 0;
+    left: 0;
+    @include flexCenter();
+    padding: 40px;
+    @include visible(true);
+    visibility: hidden;
+    @include transition($t);
+    &.open-modal {
+        @include visible;
+        visibility: visible;
+        @include transition($t);
+        .modal__content {
+            @include transition($t);
+        }
+    }
+    &__content {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        max-height: 576px;
+        height: 100%;
+        border: 1px solid $color-white;
+        background-color: $color-dark;
+        @include transition($t);
+        iframe {
+            position: absolute;
+            @include size(100%);
+        }
+    }
+    &__close {
+        position: absolute;
+        right: -30px;
+        top: -30px;
+        background-color: $color-white;
+        border: 0;
+        @include br(50%);
+        @include size(50px);
+        outline: 0;
+        padding: 10px;
+        cursor: pointer;
+        @include transition(all 0.3s);
+        img {
+            @include size(100%);
+            @include transform(scale(0.9) rotate(0deg));
+            @include transition(all 0.3s);
+        }
+        &:hover {
+            img {
+                @include transform(scale(0.8) rotate(90deg));
+                @include transition(all 0.3s);
+            }
+        }
+    }
+
+    @include xs {
+        &__content {
+            max-height: 400px;
+        }
+        &__close {
+            @include positionCenter('left');
+            top: -80px;
+        }
+    }
+    @include xxs {
+        &__content {
+            max-height: 320px;
+        }
+    }
+    @include maxW(425px) {
+        padding: 20px;
+        &__content {
+            max-height: 280px;
+        }
+    }
+}
+
+.--hidden {
+    display: none;
+}

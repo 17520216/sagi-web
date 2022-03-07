@@ -1,0 +1,45 @@
+nav {
+    @include size(100%);
+    position: fixed;
+    z-index: 400;
+    top: 0;
+    left: 0;
+    background: $color-black;
+    opacity: 0;
+    pointer-events: none;
+    @include transition($t);
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ul {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            > li {
+                a {
+                    width: 100%;
+                    font-size: 2.4rem;
+                    line-height: 2.8rem;
+                    padding: 12px 20px;
+                    display: block;
+                    color: $color-white;
+                    &.active,
+                    &:focus {
+                        -webkit-text-fill-color: $color-white;
+                    }
+                    @include xsX {
+                        padding: 8px 20px;
+                    }
+                }
+            }
+        }
+    }
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+        @include transition($t);
+    }
+}

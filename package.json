@@ -1,0 +1,17 @@
+{
+  "name": "wooder-landing-page",
+  "version": "1.0.0",
+  "description": "Template Wooder Landing Page",
+  "main": "index.js",
+  "author": "Trieu Nguyen Tuan",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "load-grunt-tasks": "^5.1.0"
+  }
+}
