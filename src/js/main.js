@@ -14,7 +14,7 @@ function handleScrollMenu() {
 
     menuMobile.forEach((menuItem) => {
         let href = menuItem.getAttribute('href').slice(1);
-        let section = document.querySelector(`.sc${href}`);
+        let section = document.querySelector(`.${href}`);
         menuItem.addEventListener('click', function (e) {
             e.preventDefault();
 
@@ -28,7 +28,7 @@ function handleScrollMenu() {
 
     menuList.forEach((menuItem, index) => {
         let href = menuItem.getAttribute('href').slice(1);
-        let section = document.querySelector(`.sc${href}`);
+        let section = document.querySelector(`.${href}`);
         sectionList.push(section);
         menuItem.addEventListener('click', function (e) {
             e.preventDefault();
