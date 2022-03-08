@@ -9,36 +9,28 @@
       h2 {
         cursor: pointer;
         font-weight: bold;
-        font-size: 28px;
         line-height: 33px;
-        text-transform: uppercase;
-        color: #ffffff;
+        @include text($font-pn-b, #ffffff, 2.8rem, bold, uppercase, 32px);
+
       }
       p {
-        font-size: 28px;
-        line-height: 42px;
-        color: #f0f0f0;
+        @include text($font-pn-l, #f0f0f0, 2.8rem, bold, null, 42px);
         padding: 36px 0 25px 0;
       }
       .contact-info {
         display: flex;
         align-items: center;
         span {
-          font-size: 12px;
-          line-height: 18px;
           letter-spacing: 3px;
-          text-transform: uppercase;
-          color: #ffffff;
+          @include text($font-pn-l, #ffffff, 1.2rem, null, uppercase, 18px);
+
         }
       }
     }
     .right {
       h2 {
-        font-size: 30px;
-        line-height: 33px;
+        @include text($font-pn-bt, #f0f0f0, 3rem, null, uppercase, 33px);
         letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: #f0f0f0;
         opacity: 0.6;
       }
       .info-contact {
@@ -46,16 +38,12 @@
         justify-content: space-between;
         padding: 26px 0 14px 0;
         p {
-          font-size: 16px;
-          line-height: 30px;
-          color: #f0f0f0;
+          @include text($font-pn-l, #f0f0f0, 1.6rem, null, null, 30px);
           border-bottom: 1px solid #c4c4c4;
         }
       }
       .address {
-        font-size: 16px;
-        line-height: 30px;
-        color: #f0f0f0;
+        @include text($font-pn-l, #f0f0f0, 1.6rem, null, null, 30px);
         margin-bottom: 24px;
       }
       ul {

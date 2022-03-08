@@ -9,32 +9,52 @@
 
     <!-- ---------------------- Fonts ---------------------- -->
     <style>
+      
         @font-face {
-            font-family: 'PN-ExtraBold';
-            src: url('./fonts/ProximaNovaA-Extrabld.woff2') format('woff2'),
-                url('./fonts/ProximaNovaA-Extrabld.woff') format('woff');
+            font-family: 'PP-Bold';
+            src: url('./fonts/Poppins-SemiBold.woff2') format('woff2'),
+                url('./fonts/Poppins-SemiBold.woff') format('woff');
             font-weight: bold;
             font-style: normal;
             font-display: fallback;
         }
 
         @font-face {
-            font-family: 'PN-Bold';
-            src: url('./fonts/ProximaNova-Bold.woff2') format('woff2'),
-                url('./fonts/ProximaNova-Bold.woff') format('woff');
+            font-family: 'PP-BoldTitle';
+            src: url('./fonts/Poppins-Bold.woff2') format('woff2'),
+                url('./fonts/Poppins-Bold.woff') format('woff');
             font-weight: bold;
             font-style: normal;
             font-display: fallback;
         }
 
         @font-face {
-            font-family: 'PN';
-            src: url('./fonts/ProximaNova-Regular.woff2') format('woff2'),
-                url('./fonts/ProximaNova-Regular.woff') format('woff');
-            font-weight: normal;
+            font-family: 'PP-Med';
+            src: url('./fonts/Poppins-Medium.woff2') format('woff2'),
+                url('./fonts/Poppins-Medium.woff') format('woff');
+            font-weight: bold;
             font-style: normal;
             font-display: fallback;
         }
+        @font-face {
+            font-family: 'PP-Light';
+            src: url('./fonts/Poppins-Light.woff2') format('woff2'),
+                url('./fonts/Poppins-Light.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+        @font-face {
+            font-family: 'EXtra-Bold';
+            src: url('./fonts/Poppins-ExtraBold.woff2') format('woff2'),
+                url('./fonts/Poppins-ExtraBold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: fallback;
+        }
+
+
     </style>
 
     <!-- ----------------------- CSS ----------------------- -->
@@ -128,7 +148,7 @@
             <section class="banner">
                 <div class="container">
                     <div class="banner__content">
-                        <h2 class="heading --h2">The Simons Astrophysics Group at ICISE, Quy Nhon, Vietnam (SAGI)</h2>
+                        <h2 class="heading">The Simons Astrophysics Group at ICISE, Quy Nhon, Vietnam (SAGI)</h2>
                         <p class="des">SAGI provides opportunities for collaboration between overseas astronomers and
                             astronomers inside of Vietnam.</p>
                         <div class="btn">Contact Us</div>
@@ -144,12 +164,12 @@
                 <div class="container">
                     <h2 class="title --main">lastest news</h2>
                     <div class="block-arrows">
-                        <div class="btn-around --reverse">
+                        <div class="btn-around --prev">
                             <div class="round">
                                 <img src="images/arrows.png" alt="Sagi" />
                             </div>
                         </div>
-                        <div class="btn-around">
+                        <div class="btn-around --next">
                             <div class="round">
                                 <img src="images/arrows.png" alt="Sagi" />
                             </div>
@@ -182,14 +202,14 @@
                             <img src="images/arrows.png" alt="Sagi" />
                         </div>
                     </div>
-                    <!-- <div class="news__items">
-                        <img srcset="images/new-1.jpg 2x" alt="Sagi" />
-                        <p class="text">Lorem ipsum or lipsum as it is sometimes  as it is sometimes</p>
+                    <div class="news__items">
+                        <img class="img-main" src="images/new-1.jpg" alt="Sagi" />
+                        <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes</p>
                         <div class="btn-more">
                             <span>View more</span>
                             <img src="images/arrows.png" alt="Sagi" />
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </section>
 
@@ -493,37 +513,67 @@
                     </div>
                 </div>
             </section>
+            <!-- -------------------- Collaborators --------------------- -->
 
             <section class="collaborators" id="collaborators">
                 <div class="container">
                     <h2 class="title-section">VOICES OF OUR COLLABORATORs</h2>
-                    <div class="slider-info">
+                    <div class="wrap">
                         <div class="block-arrows">
-                            <div class="btn-around --reverse">
+                            <div class="btn-around colab --prev">
                                 <div class="round">
                                     <img src="images/arrows.png" alt="Sagi" />
                                 </div>
                             </div>
-                            <div class="btn-around">
+                            <div class="btn-around colab --next ">
                                 <div class="round">
                                     <img src="images/arrows.png" alt="Sagi" />
                                 </div>
                             </div>
                         </div>
-                        <div class="head-info">
-                            <div class="img-avt">
-                                <img src="/images/avatar.png" alt="avt">
+                        <div class="slide" >
+                            <div class="items">
+                                <div class="head-info">
+                                    <div class="img-avt">
+                                        <img src="/images/avatar.png" alt="avt">
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="name">Nghia Tran</h4>
+                                        <p class="chapter">Founder,CEO</p>
+                                    </div>
+                                </div>
+                                <div class="des">
+                                    Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+                                    print,
+                                    graphic or web designs. The passage is attributed to an unknown typesetter in the
+                                    15th
+                                    century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et
+                                    Malorum
+                                    for
+                                    use in a type specimen book.
+                                </div>
                             </div>
-                            <div class="info">
-                                <h4 class="name">Nghia Tran</h4>
-                                <p class="chapter">Founder,CEO</p>
+                            <div class="items">
+                                <div class="head-info">
+                                    <div class="img-avt">
+                                        <img src="/images/avatar.png" alt="avt">
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="name">Nghia Tran</h4>
+                                        <p class="chapter">Founder,CEO</p>
+                                    </div>
+                                </div>
+                                <div class="des">
+                                    Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+                                    print,
+                                    graphic or web designs. The passage is attributed to an unknown typesetter in the
+                                    15th
+                                    century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et
+                                    Malorum
+                                    for
+                                    use in a type specimen book.
+                                </div>
                             </div>
-                        </div>
-                        <div class="des">
-                            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print,
-                            graphic or web designs. The passage is attributed to an unknown typesetter in the 15th
-                            century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for
-                            use in a type specimen book.
                         </div>
                         <div class="dots">
                             <span></span>
@@ -536,6 +586,7 @@
                 </div>
             </section>
 
+            <!-- -------------------- Contact --------------------- -->
             <section class="contact" id="contact">
                 <div class="container">
                     <h2 class="title-section">About us</h2>

@@ -13,5 +13,6 @@
     "grunt-contrib-uglify": "^5.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "load-grunt-tasks": "^5.1.0"
-  }
+  },
+  "dependencies": {}
 }

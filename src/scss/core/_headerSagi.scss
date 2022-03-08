@@ -23,7 +23,7 @@
       a {
         position: relative;
         padding-bottom: 2px;
-        @include text($font-pn-b, $tcl-white, var(--fs-nav), null, uppercase);
+        @include text($font-pn-b, $tcl-white, var(--fs-body), null, uppercase);
         @include transition($t);
         will-change: transition;
         white-space: pre;

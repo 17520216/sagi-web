@@ -40,8 +40,11 @@ $gap: 30px;
 /*                          Fonts                         */
 /* ------------------------------------------------------ */
 $font-pn: 'PN', sans-serif;
-$font-pn-eb: 'PN-ExtraBold', sans-serif;
-$font-pn-b: 'PN-Bold', sans-serif;
+$font-pn-eb: 'PP-Bold', sans-serif;
+$font-pn-b: 'PP-Med', sans-serif;
+$font-pn-l: 'PP-Light', sans-serif;
+$font-pn-extra: 'EXtra-Bold', sans-serif;
+$font-pn-bt: 'PP-BoldTitle', sans-serif;
 
 /* ------------------------------------------------------ */
 /*                          Color                         */
@@ -61,6 +64,7 @@ $tcl-body: #464646;
 $tcl-black: #000000;
 $tcl-white: #fff;
 $tcl-light: #b0b0b0;
+$tcl-des: #f0f0f0;
 
 /* ------------------------------------------------------ */
 /*                        Root Font                       */
@@ -71,11 +75,15 @@ $tcl-light: #b0b0b0;
 
     --fs-nav: 1.5rem;
 
-    --fs-h1: 8.4rem;
-    --lh-h1: 8.4rem;
+    --fs-h1: 7rem;
+    --lh-h1: 7rem;
 
-    --fs-h2: 4rem;
-    --lh-h2: 8.4rem;
+    --fs-h2: 4.8rem;
+    --lh-h2: 4.8rem;
+
+    --fs-p: 2rem;
+
+    --fs-title: 2.8rem;
 
     --fs-t42: 4.2rem;
     --fs-t18: 1.8rem;

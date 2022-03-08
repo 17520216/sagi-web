@@ -1,4 +1,12 @@
 
+$(document).ready(function () {
+    handleFixedMenu();
+    handleScrollMenu();
+    sliderHome();
+    sliderCollabor();
+});
+
+
 /* ------------ 05. Remove Class Active Menu ------------ */
 function removeClassActiveMenu(menuList) {
     menuList.forEach((item) => item.classList.remove('active'));
@@ -19,7 +27,7 @@ function handleScrollMenu() {
             e.preventDefault();
 
             $('html, body')[0].scrollTo({
-                top: section.offsetTop + 1,
+                top: section.offsetTop + heightHeader + 1,
             });
             $('.header__right .hamburger').removeClass('active');
             $('nav').removeClass('active');
@@ -107,3 +115,59 @@ $(window).resize(function () {
     const left = document.querySelector(".news .container").getBoundingClientRect().x + 15;
     $(slider).css(`margin-left`, `${left}px`)
 });
+
+
+/* <-------  slider news  -------> */
+function sliderHome() {
+    let slider = $('.slider');
+    slider.flickity({
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+    });
+
+    $('.btn-around.--prev').on('click', function (e) {
+        e.preventDefault();
+        slider.flickity('previous');
+    });
+    $('.btn-around.--next').on('click', function (e) {
+        e.preventDefault();
+        slider.flickity('next');
+    });
+}
+
+
+/* <-------  Slider collaborators  -------> */
+function sliderCollabor() {
+    let slider = $('.slide');
+    let pagingNumber = $('.scslider__bottom-paging span');
+    let paging = $('.scslider__bottom-paging');
+    slider.flickity({
+        wrapAround: true,
+        prevNextButtons: false,
+        pauseAutoPlayOnHover: false,
+        fade: true,
+        on: {
+            change(index) {
+                let number = index + 1;
+                pagingNumber.html(number.toString().padStart(2, 0));
+            },
+            ready() {
+                let dots = $('.flickity-page-dots');
+                paging.append(dots);
+            },
+        },
+    });
+
+    $('.btn-around.colab.--prev').on('click', function (e) {
+        e.preventDefault();
+        slider.flickity('previous');
+    });
+    $('.btn-around.colab.--next').on('click', function (e) {
+        e.preventDefault();
+        slider.flickity('next');
+    });
+}
+
+
+
