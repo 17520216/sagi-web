@@ -174,6 +174,7 @@ function sliderHome() {
         slidesToScroll: 1,
         dots: false,
         arrows: false,
+        centerMode: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -184,6 +185,13 @@ function sliderHome() {
             {
                 breakpoint: 768,
                 settings: {
+                    slidesToShow: 1,
+                }
+            },
+            {
+                breakpoint: 370,
+                settings: {
+                    centerMode: false,
                     slidesToShow: 1,
                 }
             },
