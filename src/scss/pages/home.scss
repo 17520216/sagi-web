@@ -1,7 +1,8 @@
 .banner {
-  height: 100vh;
+  height: 700px;
   background: #161616;
   overflow: hidden;
+  padding-top: 70px;
   .container {
     height: 100%;
     position: relative;
@@ -31,18 +32,30 @@
 
 .news {
   margin-top: 100px;
-  .container {
+  .block-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 60px;
+    padding-bottom: 57px;
   }
   &__items {
     padding-right: 24px;
-    max-width: 35%;
+    width: 33%;
     .img-main {
       height: 250px;
       width: 100%;
+      overflow: hidden;
+      img {
+        opacity: 0.8;
+        height: 100%;
+        width: 100%;
+        @include transition($t);
+      }
+      &:hover {
+        img {
+          opacity: 1;
+          transform: scale(1.08);
+        }
+      }
     }
     .text {
       @include text($font-pn-eb, #f0f0f0, 2rem, 600, null, 154.69%);
@@ -54,6 +67,10 @@
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       display: -webkit-box;
+      @include transition($t);
+      &:hover {
+        color: #bea67c;
+      }
     }
   }
 }
@@ -99,13 +116,17 @@
         opacity: 0.6;
       }
     }
+    .img-act {
+      margin-bottom: 22px;
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
 .partner {
-  &__main {
-    background: #161616;
-  }
+  background: #161616;
   .title-section {
     text-align: center;
     padding-top: 104px;
@@ -212,6 +233,22 @@
       }
     }
   }
+  /* <-------  custom dots flickity  -------> */
+  .flickity-page-dots {
+    width: auto;
+    bottom: -50px;
+    .dot {
+      margin-left: 0px;
+      margin-right: 8px;
+      background: #c4c4c4;
+      width: 6px;
+      height: 6px;
+      opacity: 0.3;
+      &.is-selected {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .contact {
@@ -271,18 +308,20 @@
     font-size: 2rem;
     line-height: 30px;
   }
-  .heading {
-    font-size: 2.2rem;
-  }
   .banner {
-    height: 40vh;
-    min-height: 500px;
+    height: 500px;
     &__content {
       max-width: 66%;
       .des {
         font-size: 1.5rem;
         padding: 12px 0 22px 0;
       }
+    }
+  }
+
+  .news {
+    &__items {
+      width: 50%;
     }
   }
   .activities {
@@ -294,7 +333,7 @@
     }
     &__items {
       margin-top: 0px;
-      margin-bottom: 20px;
+      margin-bottom: 75px;
       .img-act {
         width: 35%;
       }
@@ -349,29 +388,50 @@
 
 @include xs {
   .section {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
+  }
+  .title-section {
+    font-size: 2.5rem;
+    line-height: 40px;
+    &.--pre {
+      white-space: pre;
+    }
   }
   .heading {
-    font-size: 1.7rem;
+    font-size: 3.4rem;
   }
   .banner {
-    min-height: 360px;
+    height: auto;
+    padding-bottom: 60px;
     &__content {
       padding-top: 50px;
-      max-width: 80%;
+      position: relative;
+      top: unset;
+      left: unset;
+      max-width: 100%;
+      transform: translate(0);
+      z-index: 2;
       .des {
         font-size: 1.2rem;
       }
     }
     &__img {
-      width: 92%;
-      top: 65%;
+      position: unset;
+      top: unset;
+      left: unset;
+      max-width: 100%;
+      transform: translate(0);
+      width: 100%;
+      margin-top: -28px;
     }
   }
   .news {
     margin-top: 40px;
     .container {
       padding-bottom: 32px;
+    }
+    &__items {
+      width: 100%;
     }
   }
   .activities {
@@ -397,12 +457,20 @@
       .content {
         width: 100%;
         padding: 20px 0 20px 0;
+        .title-act {
+          font-size: 2.4rem;
+        }
       }
     }
   }
   .partner {
     &__main {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 40px;
+
       .list {
+        width: 50%;
         flex-direction: column;
         justify-content: center;
         .img-main {
@@ -419,25 +487,32 @@
     }
     .title-section {
       width: 100%;
+      margin-bottom: 30px;
     }
     &__main {
       width: 100%;
       display: flex;
+      gap: 20px;
       .list {
         margin-top: 20px;
         flex-direction: column;
         padding-bottom: 32px;
         .items {
-          margin-bottom: 10px;
+          margin-bottom: 30px;
           .name {
-            line-height: 10px;
+            line-height: 26px;
+            font-size: 1.7rem;
+          }
+          .chapter {
+            line-height: 22px;
+            font-size: 1rem;
           }
         }
       }
     }
   }
   .collaborators {
-    padding: 50px 0;
+    padding: 60px 0;
     .container {
       flex-direction: column;
     }
@@ -445,7 +520,7 @@
       width: 100%;
       padding-bottom: 32px;
     }
-    .wrap{
+    .wrap {
       width: 100%;
     }
     .items {
@@ -458,7 +533,7 @@
         }
         .info {
           .name {
-            font-size: 1.5rem;
+            font-size: 2.2rem;
           }
           .chapter {
             font-size: 1rem;
@@ -466,10 +541,13 @@
         }
       }
     }
+    .flickity-page-dots {
+      width: 100%;
+    }
   }
   .contact {
     .title-section {
-      padding-bottom: 30px;
+      padding-bottom: 60px;
     }
   }
 }

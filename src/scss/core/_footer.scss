@@ -36,9 +36,14 @@
         display: flex;
         justify-content: space-between;
         padding: 26px 0 14px 0;
-        p {
+        a {
           @include text($font-pn-l, #f0f0f0, 1.6rem, null, null, 30px);
           border-bottom: 1px solid #c4c4c4;
+          @include transition($t);
+          &:hover {
+            color: #bea67c;
+            border-bottom: 1px solid #bea67c;
+          }
         }
       }
       .address {
@@ -73,6 +78,25 @@
       .right {
         .info-contact {
           padding: 14px 0 14px 0;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  .footer {
+    &__main {
+      padding-bottom: 60px;
+      .left {
+        p {
+          font-size: 2.4rem;
+          line-height: 30px;
+        }
+      }
+      .right {
+        h2 {
+          font-size: 2.6rem;
         }
       }
     }

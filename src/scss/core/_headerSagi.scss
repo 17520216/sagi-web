@@ -7,10 +7,11 @@
   @include transition($t);
   &.--fixed {
     background-color: $color-dark;
+    --height-header: 80px;
     @include transition($t);
   }
 
-  .container {
+  .container-fluid {
     height: 100%;
     @include flex(null, space-between, center);
   }
@@ -23,7 +24,7 @@
       a {
         position: relative;
         padding-bottom: 2px;
-        @include text($font-pn-b, $tcl-white, var(--fs-body), null, uppercase);
+        @include text($font-pn-b, $tcl-white, var(--fs-body), null, normal);
         @include transition($t);
         will-change: transition;
         white-space: pre;
@@ -58,7 +59,7 @@
       align-items: center;
       &__current {
         @include flex(null, null, center);
-        @include text($font-pn-b, $tcl-white, var(--fs-nav), null, uppercase);
+        @include text($font-pn-b, $tcl-white, var(--fs-nav), null, normal);
         column-gap: 5px;
         padding: 5px 0 5px 5px;
         @include transition($t);
@@ -83,7 +84,7 @@
               $tcl-white,
               var(--fs-nav),
               null,
-              uppercase
+              normal
             );
             text-align: center;
             padding: 8px 25px;

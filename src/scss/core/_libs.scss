@@ -8,6 +8,17 @@
 .flickity-enabled:focus {
     outline: none;
 }
+/* flickity-fade */
+
+.flickity-enabled.is-fade .flickity-slider > * {
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .flickity-enabled.is-fade .flickity-slider > .is-selected {
+    pointer-events: auto;
+    z-index: 1;
+  }
 
 .flickity-viewport {
     overflow: hidden;

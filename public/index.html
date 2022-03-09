@@ -9,7 +9,6 @@
 
     <!-- ---------------------- Fonts ---------------------- -->
     <style>
-      
         @font-face {
             font-family: 'PP-Bold';
             src: url('./fonts/Poppins-SemiBold.woff2') format('woff2'),
@@ -36,6 +35,7 @@
             font-style: normal;
             font-display: fallback;
         }
+
         @font-face {
             font-family: 'PP-Light';
             src: url('./fonts/Poppins-Light.woff2') format('woff2'),
@@ -53,13 +53,11 @@
             font-style: normal;
             font-display: fallback;
         }
-
-
     </style>
 
     <!-- ----------------------- CSS ----------------------- -->
     <link rel="stylesheet" href="css/style.min.css" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
 </head>
 
@@ -68,7 +66,7 @@
 
     <div class="wrapper">
         <header class="header">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="header__logo">
                     <h1 class="--hidden">sagi</h1>
                     <a href="/" class="header__logo-img">
@@ -101,8 +99,10 @@
                 <div class="header__right">
                     <div class="lang">
                         <span class="lang__current">Language</span>
-                        <a data-href="en" href="#en" class="lang__icon en "><img  srcset="images/flag_uk.jpg 2x" alt="Sagi" /></a>
-                        <a data-href="vn" href="#vn" class="lang__icon vn --hidden"><img  srcset="images/flag_vn.jpg 2x" alt="Sagi" /></a>
+                        <a data-href="en" href="#en" class="lang__icon en "><img srcset="images/flag_uk.jpg 2x"
+                                alt="Sagi" /></a>
+                        <a data-href="vn" href="#vn" class="lang__icon vn --hidden"><img srcset="images/flag_vn.jpg 2x"
+                                alt="Sagi" /></a>
                     </div>
                     <div class="hamburger">
                         <span></span>
@@ -161,55 +161,66 @@
             <!-- -------------------- News --------------------- -->
             <section class="section news" id="news">
                 <div class="container">
-                    <h2 class="title --main">lastest news</h2>
-                    <div class="block-arrows">
-                        <div class="btn-around --prev slick-prev">
-                            <div class="round">
-                                <img src="images/arrows.png" alt="Sagi" />
+                    <div class="block-title">
+                        <h2 class="title-section --pre">lastest news</h2>
+                        <div class="block-arrows">
+                            <div class="btn-around --prev slick-prev">
+                                <div class="round">
+                                    <img srcset="images/arrows.png 2x" alt="Sagi" />
+                                </div>
+                            </div>
+                            <div class="btn-around --next slick-next">
+                                <div class="round">
+                                    <img srcset="images/arrows.png 2x" alt="Sagi" />
+                                </div>
                             </div>
                         </div>
-                        <div class="btn-around --next slick-next">
-                            <div class="round">
-                                <img src="images/arrows.png" alt="Sagi" />
+                    </div>
+                    <div class="slider">
+                        <div class="news__items">
+                            <div class="img-main">
+                                <img srcset="images/new-1.jpg 2x" alt="Sagi" />
+                            </div>
+                            <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes, lipsum as it is
+                                sometimes as it is sometimes</p>
+                            <div class="btn-more">
+                                <span>View more</span>
+                                <img srcset="images/arrows.png 2x" alt="Sagi" />
+                            </div>
+                        </div>
+                        <div class="news__items">
+                            <div class="img-main">
+                                <img src="images/new-2.jpg" alt="Sagi" />
+                            </div>
+                            <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes</p>
+                            <div class="btn-more">
+                                <span>View more</span>
+                                <img srcset="images/arrows.png 2x" alt="Sagi" />
+                            </div>
+                        </div>
+                        <div class="news__items">
+                            <div class="img-main">
+                                <img src="images/new-3.jpg" alt="Sagi" />
+                            </div>
+                            <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes</p>
+                            <div class="btn-more">
+                                <span>View more</span>
+                                <img srcset="images/arrows.png 2x" alt="Sagi" />
+                            </div>
+                        </div>
+                        <div class="news__items">
+                            <div class="img-main">
+                                <img src="images/new-1.jpg" alt="Sagi" />
+                            </div>
+                            <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes</p>
+                            <div class="btn-more">
+                                <span>View more</span>
+                                <img srcset="images/arrows.png 2x" alt="Sagi" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider">
-                    <div class="news__items">
-                        <img class="img-main" srcset="images/new-1.jpg 2x" alt="Sagi" />
-                        <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes, lipsum as it is
-                            sometimes as it is sometimes</p>
-                        <div class="btn-more">
-                            <span>View more</span>
-                            <img src="images/arrows.png" alt="Sagi" />
-                        </div>
-                    </div>
-                    <div class="news__items">
-                        <img class="img-main" src="images/new-2.jpg" alt="Sagi" />
-                        <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes</p>
-                        <div class="btn-more">
-                            <span>View more</span>
-                            <img src="images/arrows.png" alt="Sagi" />
-                        </div>
-                    </div>
-                    <div class="news__items">
-                        <img class="img-main" src="images/new-3.jpg" alt="Sagi" />
-                        <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes</p>
-                        <div class="btn-more">
-                            <span>View more</span>
-                            <img src="images/arrows.png" alt="Sagi" />
-                        </div>
-                    </div>
-                    <div class="news__items">
-                        <img class="img-main" src="images/new-1.jpg" alt="Sagi" />
-                        <p class="text">Lorem ipsum or lipsum as it is sometimes as it is sometimes</p>
-                        <div class="btn-more">
-                            <span>View more</span>
-                            <img src="images/arrows.png" alt="Sagi" />
-                        </div>
-                    </div>
-                </div>
+
             </section>
 
             <!-- -------------------- Activities --------------------- -->
@@ -229,7 +240,7 @@
                                 <div class="btn-around">
                                     <span>Learn more</span>
                                     <div class="round">
-                                        <img src="images/arrows.png" alt="Sagi" />
+                                        <img srcset="images/arrows.png 2x" alt="Sagi" />
                                     </div>
                                 </div>
                             </div>
@@ -246,7 +257,7 @@
                                 <div class="btn-around">
                                     <span>Learn more</span>
                                     <div class="round">
-                                        <img src="images/arrows.png" alt="Sagi" />
+                                        <img srcset="images/arrows.png 2x" alt="Sagi" />
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +273,7 @@
                                 <div class="btn-around">
                                     <span>Learn more</span>
                                     <div class="round">
-                                        <img src="images/arrows.png" alt="Sagi" />
+                                        <img srcset="images/arrows.png 2x" alt="Sagi" />
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +290,7 @@
                                 <div class="btn-around">
                                     <span>Learn more</span>
                                     <div class="round">
-                                        <img src="images/arrows.png" alt="Sagi" />
+                                        <img srcset="images/arrows.png 2x" alt="Sagi" />
                                     </div>
                                 </div>
                             </div>
@@ -295,7 +306,7 @@
                                 <div class="btn-around">
                                     <span>Learn more</span>
                                     <div class="round">
-                                        <img src="images/arrows.png" alt="Sagi" />
+                                        <img srcset="images/arrows.png 2x" alt="Sagi" />
                                     </div>
                                 </div>
                             </div>
@@ -312,7 +323,7 @@
                                 <div class="btn-around">
                                     <span>Learn more</span>
                                     <div class="round">
-                                        <img src="images/arrows.png" alt="Sagi" />
+                                        <img srcset="images/arrows.png 2x" alt="Sagi" />
                                     </div>
                                 </div>
                             </div>
@@ -328,7 +339,7 @@
                                 <div class="btn-around">
                                     <span>Learn more</span>
                                     <div class="round">
-                                        <img src="images/arrows.png" alt="Sagi" />
+                                        <img srcset="images/arrows.png 2x" alt="Sagi" />
                                     </div>
                                 </div>
                             </div>
@@ -340,8 +351,8 @@
             <!-- -------------------- Our partner --------------------- -->
             <section class="section partner" id="partner">
                 <div class="container">
+                    <h2 class="title-section">Our partner</h2>
                     <div class="partner__main">
-                        <h2 class="title-section">Our partner</h2>
                         <div class="list">
                             <img class="img-main" srcset="images/partner-1.png 2x" alt="Sagi" />
                             <img class="img-main --center" srcset="images/partner-2.png 2x" alt="Sagi" />
@@ -521,16 +532,16 @@
                         <div class="block-arrows">
                             <div class="btn-around colab --prev">
                                 <div class="round">
-                                    <img src="images/arrows.png" alt="Sagi" />
+                                    <img srcset="images/arrows.png 2x" alt="Sagi" />
                                 </div>
                             </div>
                             <div class="btn-around colab --next ">
                                 <div class="round">
-                                    <img src="images/arrows.png" alt="Sagi" />
+                                    <img srcset="images/arrows.png 2x" alt="Sagi" />
                                 </div>
                             </div>
                         </div>
-                        <div class="slide" >
+                        <div class="slide sliderFade">
                             <div class="items">
                                 <div class="head-info">
                                     <div class="img-avt">
@@ -628,7 +639,7 @@
                             <span>contact us</span>
                             <div class="btn-around">
                                 <div class="round">
-                                    <img src="images/arrows.png" alt="Sagi" />
+                                    <img srcset="images/arrows.png 2x" alt="Sagi" />
                                 </div>
                             </div>
                         </div>
@@ -636,21 +647,21 @@
                     <div class="right">
                         <h2>GET IN TOUCH</h2>
                         <div class="info-contact">
-                            <p>qinfo@sagi.com</p>
-                            <p>(408) 855-8765</p>
+                            <a href="mailto:qinfo@sagi.com">qinfo@sagi.com</a>
+                            <a href="tel:(408) 855-8765">(408) 855-8765</a>
                         </div>
                         <p class="address">Area 2, Ghenh Rang ward, Quy Nhon city, <br />
                             Binh Dinh province, Vietnam</p>
 
                         <ul>
                             <li>
-                                <a href="#"><img src="/images/fb.png" alt="social"></a>
+                                <a href="#"><img srcset="/images/fb.png 2x" alt="social"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="/images/twitter.png" alt="social"></a>
+                                <a href="#"><img srcset="/images/twitter.png 2x" alt="social"></a>
                             </li>
                             <li>
-                                <a href="#"><img src="/images/link.png" alt="social"></a>
+                                <a href="#"><img srcset="/images/link.png 2x" alt="social"></a>
                             </li>
                         </ul>
                     </div>
@@ -665,7 +676,7 @@
     <!--                      ScriptJS                       -->
     <!-- --------------------------------------------------- -->
     <script src="js/main.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
 
 </body>
