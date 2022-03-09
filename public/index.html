@@ -59,6 +59,8 @@
 
     <!-- ----------------------- CSS ----------------------- -->
     <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 </head>
 
 <body>
@@ -99,11 +101,8 @@
                 <div class="header__right">
                     <div class="lang">
                         <span class="lang__current">Language</span>
-                        <img class="lang__icon" srcset="images/flag_uk.jpg" alt="Sagi" />
-                        <ul class="lang__list --hidden">
-                            <li><img src="images/flag_uk.jpg" alt="Sagi" /></li>
-                            <li><img src="images/flag_uk.jpg" alt="Sagi" /></li>
-                        </ul>
+                        <a data-href="en" href="#en" class="lang__icon en "><img  srcset="images/flag_uk.jpg" alt="Sagi" /></a>
+                        <a data-href="vn" href="#vn" class="lang__icon vn --hidden"><img  srcset="images/flag_vn.jpg" alt="Sagi" /></a>
                     </div>
                     <div class="hamburger">
                         <span></span>
@@ -160,16 +159,16 @@
             </section>
 
             <!-- -------------------- News --------------------- -->
-            <section class="news" id="news">
+            <section class="section news" id="news">
                 <div class="container">
                     <h2 class="title --main">lastest news</h2>
                     <div class="block-arrows">
-                        <div class="btn-around --prev">
+                        <div class="btn-around --prev slick-prev">
                             <div class="round">
                                 <img src="images/arrows.png" alt="Sagi" />
                             </div>
                         </div>
-                        <div class="btn-around --next">
+                        <div class="btn-around --next slick-next">
                             <div class="round">
                                 <img src="images/arrows.png" alt="Sagi" />
                             </div>
@@ -215,7 +214,7 @@
 
             <!-- -------------------- Activities --------------------- -->
 
-            <section class="activities" id="activities">
+            <section class="section activities" id="activities">
                 <div class="container">
                     <h2>Our ACTIVITIES</h2>
                     <div class="list">
@@ -339,14 +338,14 @@
             </section>
 
             <!-- -------------------- Our partner --------------------- -->
-            <section class="partner" id="partner">
+            <section class="section partner" id="partner">
                 <div class="container">
                     <div class="partner__main">
                         <h2 class="title-section">Our partner</h2>
                         <div class="list">
                             <img class="img-main" src="images/partner-1.png" alt="Sagi" />
                             <img class="img-main --center" src="images/partner-2.png" alt="Sagi" />
-                            <img class="img-main" src="images/partner-3.png" alt="Sagi" />
+                            <img class="img-main --last" src="images/partner-3.png" alt="Sagi" />
                         </div>
                         <div class="list">
                             <img class="img-main" src="images/partner-4.png" alt="Sagi" />
@@ -515,7 +514,7 @@
             </section>
             <!-- -------------------- Collaborators --------------------- -->
 
-            <section class="collaborators" id="collaborators">
+            <section class="section collaborators" id="collaborators">
                 <div class="container">
                     <h2 class="title-section">VOICES OF OUR COLLABORATORs</h2>
                     <div class="wrap">
@@ -587,7 +586,7 @@
             </section>
 
             <!-- -------------------- Contact --------------------- -->
-            <section class="contact" id="contact">
+            <section class="section contact" id="contact">
                 <div class="container">
                     <h2 class="title-section">About us</h2>
                     <p class="des">
@@ -666,6 +665,8 @@
     <!--                      ScriptJS                       -->
     <!-- --------------------------------------------------- -->
     <script src="js/main.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 
 </body>
 

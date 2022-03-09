@@ -4,15 +4,63 @@ $(document).ready(function () {
     handleScrollMenu();
     sliderHome();
     sliderCollabor();
+    onChangeLanguage();
+    handleMenuMobile();
+
+    let navMobile = document.querySelector('nav');
+
+
+    $('.main').imagesLoaded({ background: true }, function () {
+        navMobile.classList.remove('--hidden');
+    });
+
 });
 
+/* ----------------- Change Language ---------------- */
+function onChangeLanguage() {
 
-/* ------------ 05. Remove Class Active Menu ------------ */
+    let language = $('.lang a');
+
+    language.click(function (e) {
+        const currentLang = e.currentTarget.attributes[1].nodeValue;
+        if (currentLang === "#en") {
+            $(".lang__icon.en").addClass("--hidden");
+            $(".lang__icon.vn").removeClass("--hidden");
+        } else {
+            $(".lang__icon.vn").addClass("--hidden");
+            $(".lang__icon.en").removeClass("--hidden");
+        }
+
+
+    });
+}
+
+/* ------------------- Menu Mobile ------------------ */
+function handleMenuMobile() {
+    let nav = $('nav');
+    let btnMenu = $('.header__right .hamburger');
+    btnMenu.on('click', function (e) {
+        e.stopPropagation();
+        $(this).toggleClass('active');
+        nav.toggleClass('active');
+    });
+
+    $(window).resize(function () {
+        if (btnMenu.hasClass('active') && $(window).innerWidth() >= 992) {
+            btnMenu.removeClass('active');
+            nav.removeClass('active');
+        }
+    });
+}
+
+
+
+/* ------------ Remove Class Active Menu ------------ */
 function removeClassActiveMenu(menuList) {
     menuList.forEach((item) => item.classList.remove('active'));
 }
 
-/* ------------------- 06. Scroll Menu ------------------ */
+/* ------------------- Scroll Menu ------------------ */
 function handleScrollMenu() {
     let menuList = document.querySelectorAll('.header__menu li a');
     let menuMobile = document.querySelectorAll('.navbar ul li a');
@@ -41,7 +89,7 @@ function handleScrollMenu() {
         menuItem.addEventListener('click', function (e) {
             e.preventDefault();
             $('html, body')[0].scrollTo({
-                top: section.offsetTop - heightHeader + 1,
+                top: section.offsetTop - heightHeader - 70,
             });
 
             removeClassActiveMenu(menuList);
@@ -66,7 +114,7 @@ function handleScrollMenu() {
     });
 }
 
-/* ------------------- 07. Fixed Menu ------------------- */
+/* ------------------- Fixed Menu ------------------- */
 function handleFixedMenu() {
     let header = document.querySelector('.header');
     let heightHeader = header.offsetHeight;
@@ -85,7 +133,7 @@ function handleFixedMenu() {
 
 
 
-/* ------------------- 10. Menu Mobile ------------------ */
+/* ------------------- Menu Mobile ------------------ */
 function handleMenuMobile() {
     let nav = $('nav');
     let btnMenu = $('.header__right .hamburger');
@@ -120,22 +168,38 @@ $(window).resize(function () {
 /* <-------  slider news  -------> */
 function sliderHome() {
     let slider = $('.slider');
-    slider.flickity({
-        wrapAround: true,
-        prevNextButtons: false,
-        pageDots: false,
-    });
+    slider.slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            },
+        ]
 
+    });
     $('.btn-around.--prev').on('click', function (e) {
         e.preventDefault();
-        slider.flickity('previous');
+        slider.slick('slickPrev');
     });
     $('.btn-around.--next').on('click', function (e) {
         e.preventDefault();
-        slider.flickity('next');
+        slider.slick('slickNext');
     });
+    console.log('slider', slider);
 }
-
 
 /* <-------  Slider collaborators  -------> */
 function sliderCollabor() {

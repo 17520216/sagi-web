@@ -30,16 +30,12 @@
 }
 
 .news {
-  padding-top: 85px;
+  margin-top: 100px;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 50px;
-  }
-
-  .slider {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
   &__items {
     padding-right: 24px;
@@ -70,7 +66,7 @@
     opacity: 0.25;
   }
   .list {
-    padding: 60px 0 140px 0;
+    padding-top: 100px;
   }
   &__items {
     display: flex;
@@ -107,7 +103,6 @@
 }
 
 .partner {
-  padding-bottom: 150px;
   &__main {
     background: #161616;
   }
@@ -120,6 +115,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    overflow: hidden;
     .img-main {
       margin-bottom: 80px;
       &.--center {
@@ -132,7 +128,6 @@
 .team {
   .container {
     display: flex;
-    padding-bottom: 62px;
   }
   .title-section {
     width: 30%;
@@ -145,6 +140,7 @@
       justify-content: space-between;
       align-items: center;
       padding-bottom: 78px;
+      overflow: hidden;
       .items {
         text-align: center;
         .avt {
@@ -171,7 +167,7 @@
 
 .collaborators {
   background: #00372d;
-  padding: 130px 0;
+  padding: 125px 0;
   .container {
     display: flex;
     justify-content: space-between;
@@ -219,7 +215,7 @@
 }
 
 .contact {
-  padding: 107px 0;
+  margin-bottom: 100px;
   .title-section {
     text-align: center;
     padding-bottom: 53px;
@@ -229,5 +225,178 @@
     margin: auto;
     @include text($font-pn-l, #f0f0f0, var(--fs-body), null, null, 30px);
     opacity: 0.6;
+  }
+}
+
+.section {
+  margin-bottom: 100px;
+}
+@include md {
+  .heading {
+    font-size: 3.2rem;
+  }
+  .title-section {
+    font-size: 2.5rem;
+  }
+  .contact {
+    .des {
+      max-width: 100%;
+    }
+  }
+  .team {
+    &__main {
+      .list {
+        .items {
+          .avt {
+            width: 160px;
+            margin: 0 auto 0px auto;
+          }
+          .name {
+            font-size: 1.7rem;
+          }
+          .chapter {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  .section {
+    margin-bottom: 60px;
+  }
+  .title-section {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .heading {
+    font-size: 2.2rem;
+  }
+  .banner {
+    height: 40vh;
+    min-height: 500px;
+    &__content {
+      max-width: 66%;
+      .des {
+        font-size: 1.5rem;
+        padding: 12px 0 22px 0;
+      }
+    }
+  }
+  .activities {
+    h2 {
+      font-size: 5rem;
+    }
+    .list {
+      padding-top: 60px;
+    }
+    &__items {
+      margin-top: 0px;
+      margin-bottom: 20px;
+      .img-act {
+        width: 35%;
+      }
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        .content {
+          padding-right: 20px;
+          padding-left: 0;
+        }
+      }
+      .content {
+        width: 65%;
+        padding-left: 20px;
+      }
+    }
+  }
+  .partner {
+    .title-section {
+      padding: 50px 0;
+    }
+    .list {
+      .img-main {
+        margin-bottom: 50px;
+        &.--last {
+          width: 200px;
+        }
+      }
+    }
+  }
+  .team {
+    &__main {
+      .list {
+        .items {
+          .avt {
+            width: 100px;
+            height: 120px;
+          }
+          .name {
+            font-size: 1.2rem;
+          }
+          .chapter {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+  .collaborators {
+    padding: 80px 0;
+  }
+}
+
+@include xs {
+  .section {
+    margin-bottom: 30px;
+  }
+  .heading {
+    font-size: 1.7rem;
+  }
+  .banner {
+    min-height: 360px;
+    &__content {
+      padding-top: 50px;
+      max-width: 80%;
+      .des {
+        font-size: 1.2rem;
+      }
+    }
+    &__img {
+      width: 85%;
+    }
+  }
+  .news {
+    margin-top: 40px;
+    .container {
+      padding-bottom: 32px;
+    }
+  }
+  .activities {
+    h2 {
+      font-size: 3rem;
+      line-height: 62px;
+      text-align: left;
+    }
+    .list {
+      padding-top: 32px;
+    }
+    &__items {
+      flex-direction: column;
+      &:nth-child(even) {
+        flex-direction: column;
+        .content {
+          padding: 20px 0 20px 0;
+        }
+      }
+      .img-act {
+        width: 100%;
+      }
+      .content {
+        width: 100%;
+        padding: 20px 0 20px 0;
+      }
+    }
   }
 }

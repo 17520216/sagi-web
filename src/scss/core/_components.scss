@@ -5,7 +5,6 @@
 .des {
   @include text($font-pn-l, $tcl-des, var(--fs-p), null, inherit, 163.12%);
   opacity: 0.6;
-
 }
 .copy {
   @include text($font-pn-b, #757575, 1.2rem, null, inherit, 18px);
@@ -14,9 +13,8 @@
 .title {
   display: flex;
   align-items: center;
-  letter-spacing: 0.16em;;
+  letter-spacing: 0.16em;
   @include text($font-pn-eb, #f0f0f0, 3rem, bold, uppercase, 45px);
-
 }
 
 .btn {
@@ -28,7 +26,6 @@
   border-radius: 40px;
   cursor: pointer;
   width: max-content;
-
 }
 
 .btn-more {
@@ -129,5 +126,18 @@
     &__title {
       font-size: 26px;
     }
+  }
+}
+@include sm {
+  .btn {
+    padding: 10px 69px;
+  }
+}
+@include xs {
+  .btn {
+    padding: 6px 50px;
+  }
+  .title {
+    font-size: 2rem;
   }
 }

@@ -2,7 +2,7 @@
   @include position(fixed, 0, 0, null, 0);
   width: 100%;
   height: var(--height-header);
-  background-color: transparent;
+  background-color: #161616;
   z-index: 600;
   @include transition($t);
   &.--fixed {
@@ -61,13 +61,8 @@
         @include text($font-pn-b, $tcl-white, var(--fs-nav), null, uppercase);
         column-gap: 5px;
         padding: 5px 0 5px 5px;
-        cursor: pointer;
         @include transition($t);
         will-change: transition;
-        &:hover {
-          color: $color-primary;
-          @include transition($t);
-        }
       }
       &__icon {
         object-fit: contain;
@@ -185,7 +180,7 @@ body.open-nav {
   }
 }
 
-@include sm {
+@include md {
   .header {
     --height-header: 60px;
     background-color: $color-black;
