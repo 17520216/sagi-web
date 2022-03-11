@@ -1,189 +1,197 @@
-// .header {
-//     @include position(fixed, 0, 0, null, 0);
-//     width: 100%;
-//     height: var(--height-header);
-//     background-color: transparent;
-//     z-index: 600;
-//     @include transition($t);
-//     &.--fixed {
-//         background-color: $color-dark;
-//         @include transition($t);
-//     }
+.header {
+  @include position(fixed, 0, 0, null, 0);
+  width: 100%;
+  height: var(--height-header);
+  background-color: #161616;
+  z-index: 600;
+  @include transition($t);
+  &.--fixed {
+    background-color: $color-dark;
+    --height-header: 80px;
+    @include transition($t);
+  }
 
-//     .container-fluid {
-//         height: 100%;
-//         @include flex(null, space-between, center);
-//     }
+  .container-fluid {
+    height: 100%;
+    @include flex(null, space-between, center);
+  }
 
-//     &__menu {
-//         @include flex(null, center, center);
-//         @include positionCenter('left');
-//         &-item {
-//             margin: 0 27px;
-//             a {
-//                 position: relative;
-//                 padding-bottom: 2px;
-//                 @include text($font-pn-b, $tcl-white, var(--fs-nav), null, uppercase);
-//                 @include transition($t);
-//                 will-change: transition;
-//                 white-space: pre;
-//                 &.active,
-//                 &:hover {
-//                     color: $color-primary;
-//                     @include transition($t);
-//                 }
-//                 &::before {
-//                     content: '';
-//                     @include position(absolute, null, 0, 0, auto);
-//                     @include size(0, 2px);
-//                     background-color: $color-primary;
-//                     @include transition($t $cubic);
-//                 }
-//                 &:hover::before,
-//                 &.active::before {
-//                     left: 0;
-//                     right: auto;
-//                     @include size(100%, 2px);
-//                     @include transition($t $cubic);
-//                 }
-//             }
-//         }
-//     }
+  &__menu {
+    @include flex(null, center, center);
+    @include positionCenter("left");
+    &-item {
+      margin: 0 27px;
+      a {
+        position: relative;
+        padding-bottom: 2px;
+        @include text($font-pn-b, $tcl-white, var(--fs-body), null, normal);
+        @include transition($t);
+        will-change: transition;
+        white-space: pre;
+        &.active,
+        &:hover {
+          color: $color-primary;
+          @include transition($t);
+        }
+        &::before {
+          content: "";
+          @include position(absolute, null, 0, 0, auto);
+          @include size(0, 2px);
+          background-color: $color-primary;
+          @include transition($t $cubic);
+        }
+        &:hover::before,
+        &.active::before {
+          left: 0;
+          right: auto;
+          @include size(100%, 2px);
+          @include transition($t $cubic);
+        }
+      }
+    }
+  }
 
-//     &__right {
-//         @include flex(null, null, center);
-//         .lang {
-//             position: relative;
-//             &__current {
-//                 @include flex(null, null, center);
-//                 @include text($font-pn-b, $tcl-white, var(--fs-nav), null, uppercase);
-//                 column-gap: 5px;
-//                 padding: 5px 0 5px 5px;
-//                 cursor: pointer;
-//                 @include transition($t);
-//                 will-change: transition;
-//                 &:hover {
-//                     color: $color-primary;
-//                     @include transition($t);
-//                 }
-//             }
-//             &__list {
-//                 @include position(absolute, 180%, 0);
-//                 background-color: $color-black;
-//                 padding: 8px 0;
-//                 @include transition($t);
-//                 @include visible(true);
-//                 will-change: transition, opacity;
-//                 li {
-//                     span {
-//                         display: block;
-//                         @include text($font-pn-b, $tcl-white, var(--fs-nav), null, uppercase);
-//                         text-align: center;
-//                         padding: 8px 25px;
-//                         cursor: pointer;
-//                         @include transition($t);
-//                         &:hover {
-//                             color: $color-primary;
-//                             @include transition($t);
-//                         }
-//                     }
-//                 }
-//             }
-//             &.open-lang {
-//                 .lang {
-//                     &__list {
-//                         top: 120%;
-//                         @include transition($t);
-//                         @include visible;
-//                     }
-//                 }
-//             }
-//         }
+  &__right {
+    @include flex(null, null, center);
+    .lang {
+      position: relative;
+      display: flex;
+      align-items: center;
+      &__current {
+        @include flex(null, null, center);
+        @include text($font-pn-b, $tcl-white, var(--fs-nav), null, normal);
+        column-gap: 5px;
+        padding: 5px 0 5px 5px;
+        @include transition($t);
+        will-change: transition;
+      }
+      &__icon {
+        object-fit: contain;
+        margin-left: 10px;
+      }
+      &__list {
+        @include position(absolute, 180%, 0);
+        background-color: $color-black;
+        padding: 8px 0;
+        @include transition($t);
+        @include visible(true);
+        will-change: transition, opacity;
+        li {
+          span {
+            display: block;
+            @include text(
+              $font-pn-b,
+              $tcl-white,
+              var(--fs-nav),
+              null,
+              normal
+            );
+            text-align: center;
+            padding: 8px 25px;
+            cursor: pointer;
+            @include transition($t);
+            &:hover {
+              color: $color-primary;
+              @include transition($t);
+            }
+          }
+        }
+      }
+      &.open-lang {
+        .lang {
+          &__list {
+            top: 120%;
+            @include transition($t);
+            @include visible;
+          }
+        }
+      }
+    }
 
-//         .hamburger {
-//             display: none;
-//             justify-content: center;
-//             align-items: center;
-//             @include size(52px);
-//             padding: 10px;
-//             position: relative;
-//             left: 10px;
-//             cursor: pointer;
-//             overflow: hidden;
-//             span {
-//                 position: relative;
-//                 display: block;
-//                 @include size(100%, 2px);
-//                 background-color: $color-white;
-//                 @include transition($t);
-//                 will-change: transform;
-//                 &::before,
-//                 &::after {
-//                     content: '';
-//                     display: block;
-//                     position: absolute;
-//                     left: 0;
-//                     @include size(100%, 2px);
-//                     background-color: $color-white;
-//                     @include transition($t);
-//                     will-change: transform;
-//                 }
-//                 &::before {
-//                     @include transform(translateY(-10px));
-//                 }
-//                 &::after {
-//                     @include transform(translateY(10px));
-//                 }
-//             }
-//             &.active {
-//                 span {
-//                     @include transform(translateX(-52px));
-//                     background-color: transparent;
-//                     @include transition($t);
-//                     &::before,
-//                     &::after {
-//                         @include transition($t);
-//                     }
-//                     &::before {
-//                         @include transform(rotate(45deg) translate(37px, -37px));
-//                     }
-//                     &::after {
-//                         @include transform(rotate(-45deg) translate(37px, 37px));
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+    .hamburger {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      @include size(52px);
+      padding: 10px;
+      position: relative;
+      left: 10px;
+      cursor: pointer;
+      overflow: hidden;
+      span {
+        position: relative;
+        display: block;
+        @include size(100%, 2px);
+        background-color: $color-white;
+        @include transition($t);
+        will-change: transform;
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          @include size(100%, 2px);
+          background-color: $color-white;
+          @include transition($t);
+          will-change: transform;
+        }
+        &::before {
+          @include transform(translateY(-10px));
+        }
+        &::after {
+          @include transform(translateY(10px));
+        }
+      }
+      &.active {
+        span {
+          @include transform(translateX(-52px));
+          background-color: transparent;
+          @include transition($t);
+          &::before,
+          &::after {
+            @include transition($t);
+          }
+          &::before {
+            @include transform(rotate(45deg) translate(37px, -37px));
+          }
+          &::after {
+            @include transform(rotate(-45deg) translate(37px, 37px));
+          }
+        }
+      }
+    }
+  }
+}
 
-// body.open-nav {
-//     .header {
-//         &__right {
-//             .hamburger {
-//             }
-//         }
-//     }
-// }
+body.open-nav {
+  .header {
+    &__right {
+      .hamburger {
+      }
+    }
+  }
+}
 
-// @include maxW(1090px) {
-//     .header {
-//         &__menu {
-//             left: 55%;
-//         }
-//     }
-// }
+@include maxW(1090px) {
+  .header {
+    &__menu {
+      left: 55%;
+    }
+  }
+}
 
-// @include sm {
-//     .header {
-//         --height-header: 60px;
-//         background-color: $color-black;
-//         &__menu {
-//             display: none;
-//         }
-//         &__right {
-//             .hamburger {
-//                 display: flex;
-//             }
-//         }
-//     }
-// }
+@include md {
+  .header {
+    --height-header: 60px;
+    background-color: $color-black;
+    &__menu {
+      display: none;
+    }
+    &__right {
+      .hamburger {
+        display: flex;
+      }
+    }
+  }
+}

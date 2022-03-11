@@ -177,12 +177,8 @@ function sliderNews() {
 
 /* <-------  Slider collaborators  -------> */
 function sliderCollabor() {
-    let sliderCollab = $('.collaborators .sliderFade');
+    let sliderCollab = $('.carousel');
     sliderCollab.flickity({
-        wrapAround: true,
-        prevNextButtons: false,
-        pauseAutoPlayOnHover: false,
-        pageDots: true,
         fade: true,
     });
 

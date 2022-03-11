@@ -90,6 +90,17 @@
       border: 1px solid #ffffff;
     }
   }
+  &.--reverse {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    .round {
+      margin-left: 0px;
+      margin-right: 16px;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
 }
 
 .title-section {
