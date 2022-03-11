@@ -17,14 +17,6 @@
         @include text($font-pn-l, #f0f0f0, 2.8rem, bold, null, 42px);
         padding: 36px 0 25px 0;
       }
-      .contact-info {
-        display: flex;
-        align-items: center;
-        span {
-          letter-spacing: 3px;
-          @include text($font-pn-l, #ffffff, 1.2rem, null, uppercase, 18px);
-        }
-      }
     }
     .right {
       h2 {

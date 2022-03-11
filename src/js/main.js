@@ -16,6 +16,10 @@ $(document).ready(function () {
 
 });
 
+var $window = $(window);
+var $document = $(document);
+
+
 /* ----------------- Change Language ---------------- */
 function onChangeLanguage() {
 
@@ -75,7 +79,7 @@ function handleScrollMenu() {
             e.preventDefault();
 
             $('html, body')[0].scrollTo({
-                top: section.offsetTop + heightHeader + 1,
+                top: section.offsetTop + heightHeader - 200,
             });
             $('.header__right .hamburger').removeClass('active');
             $('nav').removeClass('active');
@@ -89,7 +93,7 @@ function handleScrollMenu() {
         menuItem.addEventListener('click', function (e) {
             e.preventDefault();
             $('html, body')[0].scrollTo({
-                top: section.offsetTop - heightHeader - 70,
+                top: section.offsetTop - heightHeader - 60,
             });
 
             removeClassActiveMenu(menuList);
@@ -99,10 +103,13 @@ function handleScrollMenu() {
 
     window.addEventListener('scroll', function () {
         let posScroll = window.scrollY;
-
         sectionList.forEach((item, index) => {
+
+            console.log('item.offsetHeight', item.offsetHeight);
+            console.log('item.offsetTop', item.offsetTop);
+            console.log('item.posScroll', posScroll);
             if (
-                posScroll > item.offsetTop - heightHeader &&
+                posScroll > item.offsetTop - heightHeader - 60 &&
                 posScroll < item.offsetTop + item.offsetHeight
             ) {
                 removeClassActiveMenu(menuList);
@@ -110,6 +117,11 @@ function handleScrollMenu() {
             } else {
                 menuList[index].classList.remove('active');
             }
+            if ($window.scrollTop() + $window.height() > $document.height() - 100) {
+                menuList[index].classList.remove('active'); 
+                menuList[8].classList.add('active');
+            }
+
         });
     });
 }
@@ -202,7 +214,7 @@ function sliderCollabor() {
         sliderCollab.slick('slickNext');
     });
     sliderCollab.slick({
-        draggable: true,
+        draggable: false,
         arrows: false,
         dots: true,
         fade: true,

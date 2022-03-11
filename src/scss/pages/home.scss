@@ -3,6 +3,7 @@
   background: #161616;
   overflow: hidden;
   padding-top: 70px;
+  margin-bottom: 85px;
   .container {
     height: 100%;
     position: relative;
@@ -31,15 +32,18 @@
 }
 
 .news {
-  margin-top: 100px;
+  padding-bottom: 110px;
+  .slider {
+    width: calc(100% + 24px);
+  }
   .block-title {
     display: flex;
     justify-content: space-between;
     padding-bottom: 57px;
   }
   &__items {
+    width: calc(100% / 3);
     padding-right: 24px;
-    width: 33%;
     .img-main {
       height: 250px;
       width: 100%;
@@ -76,6 +80,7 @@
 }
 
 .activities {
+  padding-bottom: 124px;
   h2 {
     text-align: center;
     letter-spacing: 0.2em;
@@ -83,7 +88,7 @@
     opacity: 0.25;
   }
   .list {
-    padding-top: 100px;
+    padding-top: 120px;
   }
   &__items {
     display: flex;
@@ -127,6 +132,7 @@
 
 .partner {
   background: #161616;
+  margin-bottom: 152px;
   .title-section {
     text-align: center;
     padding-top: 104px;
@@ -147,6 +153,7 @@
 }
 
 .team {
+  padding-bottom: 34px;
   .container {
     display: flex;
   }
@@ -160,10 +167,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 78px;
+      padding-bottom: 68px;
       overflow: hidden;
       .items {
         text-align: center;
+        width: calc(100% / 3);
         .avt {
           width: 183px;
           height: 183px;
@@ -173,12 +181,11 @@
         .name {
           letter-spacing: 0.01em;
           margin-bottom: 5px;
-          @include text($font-pn-eb, #f0f0f0, 2rem, 600, uppercase, 154.69%);
+          @include text($font-pn-eb, #f0f0f0, 2rem, 600, capitalize, 154.69%);
         }
         .chapter {
           letter-spacing: 3px;
           opacity: 0.6;
-          max-width: 241px;
           @include text($font-pn-b, #f0f0f0, 1.2rem, null, uppercase, 18px);
         }
       }
@@ -189,6 +196,7 @@
 .collaborators {
   background: #00372d;
   padding: 125px 0;
+  margin-bottom: 107px;
   .container {
     display: flex;
     justify-content: space-between;
@@ -293,8 +301,8 @@
   }
 }
 
-.contact {
-  margin-bottom: 100px;
+.about {
+  margin-bottom: 116px;
   .title-section {
     text-align: center;
     padding-bottom: 53px;
@@ -307,9 +315,9 @@
   }
 }
 
-.section {
-  margin-bottom: 100px;
-}
+// .section {
+//   margin-bottom: 100px;
+// }
 @include md {
   .heading {
     font-size: 3.2rem;
@@ -317,7 +325,7 @@
   .title-section {
     font-size: 2.5rem;
   }
-  .contact {
+  .about {
     .des {
       max-width: 100%;
     }
@@ -343,9 +351,9 @@
 }
 
 @include sm {
-  .section {
-    margin-bottom: 60px;
-  }
+  // .section {
+  //   margin-bottom: 60px;
+  // }
   .title-section {
     font-size: 2rem;
     line-height: 30px;
@@ -362,6 +370,9 @@
   }
 
   .news {
+    .slider {
+      width: 100%;
+    }
     &__items {
       width: 50%;
     }
@@ -429,9 +440,9 @@
 }
 
 @include xs {
-  .section {
-    margin-bottom: 60px;
-  }
+  // .section {
+  //   margin-bottom: 60px;
+  // }
   .title-section {
     font-size: 2.5rem;
     line-height: 40px;
@@ -444,7 +455,8 @@
   }
   .banner {
     height: auto;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
+    margin-bottom: 60px;
     &__content {
       padding-top: 50px;
       position: relative;
@@ -468,15 +480,20 @@
     }
   }
   .news {
-    margin-top: 40px;
+    padding-bottom: 30px;
     .container {
       padding-bottom: 32px;
     }
+    .slider {
+      width: 100%;
+    }
     &__items {
       width: 100%;
+      padding: 0;
     }
   }
   .activities {
+    padding-bottom: 20px;
     h2 {
       font-size: 3rem;
       line-height: 62px;
@@ -487,6 +504,7 @@
     }
     &__items {
       flex-direction: column;
+      margin-bottom: 40px;
       &:nth-child(even) {
         flex-direction: column;
         .content {
@@ -506,13 +524,12 @@
     }
   }
   .partner {
+    margin-bottom: 80px;
     &__main {
       display: flex;
-      flex-direction: row-reverse;
-      gap: 40px;
-
+      flex-direction: column;
       .list {
-        width: 50%;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         .img-main {
@@ -534,12 +551,13 @@
     &__main {
       width: 100%;
       display: flex;
-      gap: 20px;
+      gap: 16px;
       .list {
         margin-top: 20px;
         flex-direction: column;
         padding-bottom: 32px;
         .items {
+          width: 100%;
           margin-bottom: 30px;
           .name {
             line-height: 26px;
@@ -555,6 +573,7 @@
   }
   .collaborators {
     padding: 60px 0;
+    margin-bottom: 60px;
     .container {
       flex-direction: column;
     }
@@ -564,6 +583,9 @@
     }
     .wrap {
       width: 100%;
+      .block-arrows{
+        transform: translateY(25%);
+      }
     }
     .items {
       .head-info {
@@ -576,31 +598,20 @@
         .info {
           .name {
             font-size: 2.2rem;
+            max-width: 182px;
           }
           .chapter {
             font-size: 1rem;
+            max-width: 182px;
           }
         }
       }
     }
-    .flickity-page-dots {
-      width: 100%;
-    }
   }
-  .contact {
+  .about {
+    margin-bottom: 80px;
     .title-section {
       padding-bottom: 60px;
     }
   }
-}
-/* flickity-fade */
-
-.flickity-enabled.is-fade .flickity-slider > * {
-  pointer-events: none;
-  z-index: 0;
-}
-
-.flickity-enabled.is-fade .flickity-slider > .is-selected {
-  pointer-events: auto;
-  z-index: 1;
 }
