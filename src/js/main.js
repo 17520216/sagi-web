@@ -180,6 +180,7 @@ function sliderCollabor() {
     let sliderCollab = $('.carousel');
     sliderCollab.flickity({
         fade: true,
+        prevNextButtons: false,
     });
 
     $('.btn-around.colab.--prev').on('click', function (e) {
