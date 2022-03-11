@@ -485,11 +485,11 @@
       padding-bottom: 32px;
     }
     .slider {
-      width: 100%;
+      width: calc(100% + 10px);
     }
     &__items {
       width: 100%;
-      padding: 0;
+      padding-right: 10px;
     }
   }
   .activities {
