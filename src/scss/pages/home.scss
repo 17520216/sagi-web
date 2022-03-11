@@ -208,7 +208,7 @@
     }
   }
   .items {
-    &.is-selected {
+    &.slick-active {
       .des {
         opacity: 1;
         @include transform(translateY(0));
@@ -256,19 +256,39 @@
     }
   }
   /* <-------  custom dots flickity  -------> */
-  .flickity-page-dots {
-    width: auto;
-    bottom: -50px;
-    .dot {
-      margin-left: 0px;
-      margin-right: 8px;
+  // .flickity-page-dots {
+  //   width: auto;
+  //   bottom: -50px;
+  //   .dot {
+  //     margin-left: 0px;
+  //     margin-right: 8px;
+  //     background: #c4c4c4;
+  //     width: 6px;
+  //     height: 6px;
+  //     opacity: 0.3;
+  //     &.is-selected {
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
+  .slick-dots {
+    display: flex;
+    padding-top: 50px;
+    background: transparent;
+    li {
       background: #c4c4c4;
+      cursor: pointer;
+      margin-left: 10px;
+      border-radius: 50%;
       width: 6px;
       height: 6px;
       opacity: 0.3;
-      &.is-selected {
-        opacity: 1;
+      button {
+        display: none;
       }
+    }
+    .slick-active {
+      opacity: 1;
     }
   }
 }

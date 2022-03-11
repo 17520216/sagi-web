@@ -178,19 +178,40 @@ function sliderNews() {
 /* <-------  Slider collaborators  -------> */
 function sliderCollabor() {
     let sliderCollab = $('.carousel');
-    sliderCollab.flickity({
-        fade: true,
-        prevNextButtons: false,
-    });
+    // sliderCollab.flickity({
+    //     fade: true,
+    //     prevNextButtons: false,
+    // });
+
+    // $('.btn-around.colab.--prev').on('click', function (e) {
+    //     e.preventDefault();
+    //     sliderCollab.flickity('previous');
+    // });
+    // $('.btn-around.colab.--next').on('click', function (e) {
+    //     e.preventDefault();
+    //     sliderCollab.flickity('next');
+    // });
+
 
     $('.btn-around.colab.--prev').on('click', function (e) {
         e.preventDefault();
-        sliderCollab.flickity('previous');
+        sliderCollab.slick('slickPrev');
     });
     $('.btn-around.colab.--next').on('click', function (e) {
         e.preventDefault();
-        sliderCollab.flickity('next');
+        sliderCollab.slick('slickNext');
     });
+    sliderCollab.slick({
+        draggable: true,
+        arrows: false,
+        dots: true,
+        fade: true,
+        speed: 900,
+        infinite: true,
+        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+        touchThreshold: 100
+    })
+
 }
 
 
