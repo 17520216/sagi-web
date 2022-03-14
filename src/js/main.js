@@ -1,4 +1,6 @@
 
+var $window = $(window);
+var $document = $(document);
 $(document).ready(function () {
     handleFixedMenu();
     handleScrollMenu();
