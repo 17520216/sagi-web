@@ -58,7 +58,7 @@
 }
 @include sm {
   .footer {
-    padding: 30px 0 30px 0px;
+    padding: 60px 0 30px 0px;
     &__main {
       flex-direction: column;
       .left {
@@ -87,6 +87,7 @@
         }
       }
       .right {
+        margin-top: 20px;
         h2 {
           font-size: 2.6rem;
         }

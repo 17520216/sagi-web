@@ -3,71 +3,71 @@
   .main-blog {
     padding-bottom: 50px;
     border-bottom: 1px solid #525252;
+    img {
+      width: 100%;
+      margin-bottom: 58px;
+      // &.img-2 {
+      //   max-width: 80%;
+      //   margin: auto;
+      //   padding-bottom: 50px;
+      // }
+    }
+    h3 {
+      @include text($font-pn-l, #ffffff, 1.4rem, 400, uppercase, 19px);
+      text-align: center;
+      padding-bottom: 27px;
+    }
+    h2 {
+      @include text($font-pn-l, #ffffff, 4.2rem, 400, none, 63px);
+      text-align: center;
+      padding-bottom: 44px;
+    }
+
+    h4 {
+      @include text($font-pn-eb, #ffffff, 3.6rem, 700, none, 174.5%);
+      margin: 7px 0;
+    }
+    p {
+      @include text($font-pn-l, #ffffff, 1.6rem, null, inherit, 28px);
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 42px;
+      padding-bottom: 10px;
+      li {
+        @include text($font-pn-l, #ffffff, 1.6rem, null, inherit, 28px);
+        list-style-position: inside;
+      }
+    }
   }
   .back {
     display: block;
     margin: 50px 0 91px 0;
   }
-  &__name {
-    @include text($font-pn-l, #ffffff, 1.4rem, 400, uppercase, 19px);
-    text-align: center;
-    padding-bottom: 27px;
-  }
-  &__title {
-    @include text($font-pn-l, #ffffff, 4.2rem, 400, normal, 63px);
-    text-align: center;
-    padding-bottom: 44px;
-  }
-  &__img {
-    width: 100%;
-    margin-bottom: 58px;
-    &.img-2 {
-      max-width: 80%;
-      margin: auto;
-      padding-bottom: 50px;
-    }
-  }
-  .ques {
-    @include text($font-pn-eb, #ffffff, 3.6rem, 700, normal, 174.5%);
-    margin: 7px 0;
-  }
-  .des {
-    font-size: 1.6rem;
-    line-height: 28px;
-    margin-bottom: 20px;
-  }
-  .list {
-    list-style: disc;
-    padding-left: 42px;
-    padding-bottom: 10px;
-    li {
-      list-style-position: inside;
-    }
-  }
 }
 
 @include xs {
   .blog {
-    padding-top: 150px;
-    .main-blog{
-        padding-bottom: 36px;
-    }
-    &__title {
-      font-size: 3rem;
-      line-height: 39px;
-      text-align: left;
-      padding-bottom: 30px;
-    }
-    .ques {
-      font-size: 2.6rem;
-      line-height: 111.5%;
-      margin: 12px 0;
-    }
-    .list{
+    padding-top: 110px;
+    .main-blog {
+      padding-bottom: 36px;
+      h2 {
+        font-size: 2.8rem;
+        line-height: 39px;
+        padding-bottom: 30px;
+      }
+      h4 {
+        font-size: 2.2rem;
+        line-height: 111.5%;
+        margin: 12px 0;
+      }
+      ul {
         padding-left: 10px;
+      }
     }
-    .back{
-        margin: 38px 0 58px 0;     
+    .back {
+      margin: 38px 0 58px 0;
     }
   }
 }

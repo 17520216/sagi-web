@@ -20,7 +20,7 @@
     @include flex(null, center, center);
     @include positionCenter("left");
     &-item {
-      margin: 0 27px;
+      margin: 0 16px;
       a {
         position: relative;
         padding-bottom: 2px;
@@ -184,7 +184,7 @@ body.open-nav {
 @include md {
   .header {
     --height-header: 60px;
-    background-color: $color-black;
+    background-color: #161616;
     &__menu {
       display: none;
     }
@@ -192,6 +192,13 @@ body.open-nav {
       .hamburger {
         display: flex;
       }
+    }
+  }
+}
+@include sm {
+  .header{
+    &.--fixed {
+      --height-header: 60px;
     }
   }
 }

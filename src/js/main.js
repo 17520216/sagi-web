@@ -16,10 +16,6 @@ $(document).ready(function () {
 
 });
 
-var $window = $(window);
-var $document = $(document);
-
-
 /* ----------------- Change Language ---------------- */
 function onChangeLanguage() {
 
@@ -72,6 +68,7 @@ function handleScrollMenu() {
 
     let sectionList = [];
 
+
     menuMobile.forEach((menuItem) => {
         let href = menuItem.getAttribute('href').slice(1);
         let section = document.querySelector(`.${href}`);
@@ -104,10 +101,6 @@ function handleScrollMenu() {
     window.addEventListener('scroll', function () {
         let posScroll = window.scrollY;
         sectionList.forEach((item, index) => {
-
-            console.log('item.offsetHeight', item.offsetHeight);
-            console.log('item.offsetTop', item.offsetTop);
-            console.log('item.posScroll', posScroll);
             if (
                 posScroll > item.offsetTop - heightHeader - 60 &&
                 posScroll < item.offsetTop + item.offsetHeight
@@ -129,8 +122,6 @@ function handleScrollMenu() {
 /* ------------------- Fixed Menu ------------------- */
 function handleFixedMenu() {
     let header = document.querySelector('.header');
-    let heightHeader = header.offsetHeight;
-    let heightSlider = document.querySelector('.banner').offsetHeight;
 
     window.addEventListener('scroll', () => {
         let posScroll = window.scrollY;

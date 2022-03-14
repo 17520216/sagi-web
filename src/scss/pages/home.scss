@@ -115,7 +115,7 @@
         );
       }
       .des {
-        padding: 20px 0;
+        padding: 14px 0 25px 0;
         font-size: 1.6rem;
         line-height: 30px;
         opacity: 0.6;
@@ -184,7 +184,7 @@
           @include text($font-pn-eb, #f0f0f0, 2rem, 600, capitalize, 154.69%);
         }
         .chapter {
-          letter-spacing: 3px;
+          letter-spacing: 1px;
           opacity: 0.6;
           @include text($font-pn-b, #f0f0f0, 1.2rem, null, uppercase, 18px);
         }
@@ -214,6 +214,9 @@
       top: 0;
       transform: translateY(50%);
     }
+    .block-arrowsMb {
+      display: none;
+    }
   }
   .items {
     &.slick-active {
@@ -224,17 +227,17 @@
       .head-info {
         opacity: 1;
         @include transform(translateY(0));
-        @include transition(all 0.6s);
-        @include transition-delay(0.6s);
+        @include transition(all 0.4s);
+        @include transition-delay(0.4s);
       }
     }
 
     .des {
       font-size: 1.6rem;
       opacity: 0;
-      @include transition(all 0.8s);
+      @include transition(all 0.5s);
       @include transform(translateY(3rem));
-      @include transition-delay(0.6s);
+      @include transition-delay(0.5s);
       will-change: opacity, transform;
     }
     .head-info {
@@ -257,7 +260,7 @@
         @include text($font-pn-eb, #f0f0f0, 2rem, 600, null, 154.69%);
       }
       .chapter {
-        letter-spacing: 3px;
+        letter-spacing: 1px;
         @include text($font-pn-l, #f0f0f0, 1.2rem, 600, uppercase, 18px);
         opacity: 0.6;
       }
@@ -359,7 +362,6 @@
     line-height: 30px;
   }
   .banner {
-    height: 500px;
     &__content {
       max-width: 66%;
       .des {
@@ -440,9 +442,6 @@
 }
 
 @include xs {
-  // .section {
-  //   margin-bottom: 60px;
-  // }
   .title-section {
     font-size: 2.5rem;
     line-height: 40px;
@@ -454,11 +453,15 @@
     font-size: 3.4rem;
   }
   .banner {
-    height: auto;
     padding-bottom: 70px;
     margin-bottom: 60px;
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
     &__content {
-      padding-top: 50px;
+      padding-top: 26px;
       position: relative;
       top: unset;
       left: unset;
@@ -473,10 +476,10 @@
       position: unset;
       top: unset;
       left: unset;
+      margin-top: 10px;
       max-width: 100%;
       transform: translate(0);
       width: 100%;
-      margin-top: -28px;
     }
   }
   .news {
@@ -497,7 +500,6 @@
     h2 {
       font-size: 3rem;
       line-height: 62px;
-      text-align: left;
     }
     .list {
       padding-top: 32px;
@@ -518,7 +520,7 @@
         width: 100%;
         padding: 20px 0 20px 0;
         .title-act {
-          font-size: 2.4rem;
+          font-size: 2.2rem;
         }
       }
     }
@@ -530,9 +532,10 @@
       flex-direction: column;
       .list {
         width: 100%;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
         .img-main {
+          max-width: 130px;
           &.--center {
             margin-left: 0px;
           }
@@ -545,6 +548,7 @@
       flex-direction: column;
     }
     .title-section {
+      text-align: center;
       width: 100%;
       margin-bottom: 30px;
     }
@@ -579,25 +583,34 @@
     }
     .title-section {
       width: 100%;
-      padding-bottom: 32px;
+      padding-bottom: 24px;
     }
     .wrap {
       width: 100%;
-      .block-arrows{
-        transform: translateY(25%);
+      .block-arrows {
+        display: none;
+      }
+      .block-arrowsMb {
+        margin-top: 30px;
+        display: flex;
+        .--prev {
+          .round {
+            margin-left: 0;
+          }
+        }
       }
     }
     .items {
       .head-info {
         padding-bottom: 26px;
         .img-avt {
-          width: 70px;
-          height: 70px;
+          width: 55px;
+          height: 55px;
           margin-right: 10px;
         }
         .info {
           .name {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             max-width: 182px;
           }
           .chapter {
@@ -609,9 +622,15 @@
     }
   }
   .about {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     .title-section {
-      padding-bottom: 60px;
+      padding-bottom: 44px;
     }
+  }
+}
+
+@media only screen and (max-height: 667px) {
+  .banner {
+    height: 100vh;
   }
 }

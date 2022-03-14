@@ -46,7 +46,7 @@
     margin-right: 8px;
   }
   img {
-    width: 18px;
+    width: 14px;
     height: auto;
     @include transition($t);
   }
@@ -74,7 +74,6 @@
   .round {
     opacity: 0.6;
     margin-left: 16px;
-    padding: 14px;
     width: 49px;
     height: 49px;
     display: flex;
@@ -97,7 +96,6 @@
     }
     .round {
       opacity: 1;
-      transform: scale(1.09);
       border: 1px solid #ffffff;
     }
   }
@@ -119,7 +117,8 @@
   @include text($font-pn-bt, #f0f0f0, 3rem, bold, uppercase, 45px);
 }
 
-.block-arrows {
+.block-arrows,
+.block-arrowsMb {
   display: flex;
   .btn-around {
     &.--prev {
@@ -195,5 +194,14 @@
   }
   .title {
     font-size: 2rem;
+  }
+  .btn-around {
+    .round {
+      width: 38px;
+      height: 38px;
+      img {
+        width: 18px;
+      }
+    }
   }
 }

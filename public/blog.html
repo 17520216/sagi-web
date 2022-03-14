@@ -5,6 +5,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <meta name="description" content="Sagi - description"/>
+    <meta property="og:description" content="Sagi - description" />
+    <!-- <meta property="og:image" content=""/> -->
+    <meta property="og:image:alt" content={`total-tet`} />
+    <meta property="og:type" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <title>Sagi | Blog Detail</title>
 
     <!-- ---------------------- Fonts ---------------------- -->
@@ -75,31 +84,31 @@
                 </div>
                 <ul class="header__menu">
                     <li class="header__menu-item --active">
-                        <a class="active" href="#banner">Home</a>
+                        <a class="active" href="/#banner">Home</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#news">News</a>
+                        <a href="/#news">News</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#activities">Activities</a>
+                        <a href="/#activities">Activities</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#partner">Partners</a>
+                        <a href="/#partner">Partners</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#ourteam">Team</a>
+                        <a href="/#ourteam">Team</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#ourvisitors">Our Visitors</a>
+                        <a href="/#ourvisitors">Our Visitors</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#collaborators">Collaborators</a>
+                        <a href="/#collaborators">Collaborators</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#about">About</a>
+                        <a href="/#about">About</a>
                     </li>
                     <li class="header__menu-item">
-                        <a href="#contact">Contact</a>
+                        <a href="/#contact">Contact</a>
                     </li>
                 </ul>
                 <div class="header__right">
@@ -120,31 +129,30 @@
         <!-- ------------------ Begin Navbar ------------------- -->
         <nav class="navbar --hidden">
             <div class="container">
-
                 <ul>
                     <li>
-                        <a class="active" href="#banner">Home</a>
+                        <a class="active" href="/#banner">Home</a>
                     </li>
                     <li>
-                        <a href="#news">News</a>
+                        <a href="/#news">News</a>
                     </li>
                     <li>
-                        <a href="#activities">Activities</a>
+                        <a href="/#activities">Activities</a>
                     </li>
                     <li>
-                        <a href="#partner">Partner</a>
+                        <a href="/#partner">Partner</a>
                     </li>
                     <li>
-                        <a href="#ourteam">Team</a>
+                        <a href="/#ourteam">Team</a>
                     </li>
                     <li>
-                        <a href="#ourvisitors">Our Visitors</a>
+                        <a href="/#ourvisitors">Our Visitors</a>
                     </li>
                     <li>
-                        <a href="#collaborators">Collaborators</a>
+                        <a href="/#collaborators">Collaborators</a>
                     </li>
                     <li>
-                        <a href="#contact">Contact</a>
+                        <a href="/#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -153,16 +161,16 @@
 
         <!-- ------------------- Begin Main -------------------- -->
         <main class="main">
-            <section class="blog">
+            <section class="blog" id="blogDetail">
                 <div class="container">
                     <div class="main-blog">
-                        <h4 class="blog__name">news</h4>
-                        <h2 class="blog__title">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        <h3>news</h3>
+                        <h2>Lorem Ipsum is simply dummy text of the printing and typesetting
                             industry
                         </h2>
-                        <img class="blog__img" src="/images/blog_1.jpg" alt="blog">
-                        <h4 class="ques">Why do we use it?</h4>
-                        <p class="des">
+                        <img src="/images/blog_1.jpg" alt="blog">
+                        <h4>Why do we use it?</h4>
+                        <p>
                             It is a long established fact that a reader will be distracted by the readable content of a
                             page
                             when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
@@ -171,7 +179,7 @@
                             like
                             readable English.
                         </p>
-                        <p class="des">
+                        <p>
                             Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
                             model
                             text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
@@ -179,8 +187,8 @@
                             versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
                             humour and the like).
                         </p>
-                        <h4 class="ques">Where does it come from?</h4>
-                        <p class="des">
+                        <h4>Where does it come from?</h4>
+                        <p>
                             It is a long established fact that a reader will be distracted by the readable content of a
                             page
                             when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
@@ -189,7 +197,7 @@
                             like
                             readable English.
                         </p>
-                        <p class="des">Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as
                             their
                             default model
                             text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
@@ -197,16 +205,16 @@
                             versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
                             humour and the like).
                         </p>
-                        <img class="blog__img img-2" src="/images/blog_2.jpg" alt="blog">
+                        <img src="/images/blog_2.jpg" alt="blog">
 
-                        <p class="des">It is a long established fact that a reader will be distracted by the readable
+                        <p>It is a long established fact that a reader will be distracted by the readable
                             content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
                             a
                             more-or-less normal distribution of letters, as opposed to using 'Content here, content
                             here',
                             making it look like readable English.
                         </p>
-                        <p class="des">
+                        <p>
                             Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
                             model
                             text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
@@ -214,20 +222,20 @@
                             versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
                             humour and the like).
                         </p>
-                        <ul class="des list">
+                        <ul>
                             <li>Lorem ipsum dolor sit amet, consectetur</li>
                             <li>ed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
                             <li>accusantium doloremque laudantium, totam rem aperiam</li>
                             <li>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit</li>
                         </ul>
-                        <p class="des">It is a long established fact that a reader will be distracted by the readable
+                        <p>It is a long established fact that a reader will be distracted by the readable
                             content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
                             a
                             more-or-less normal distribution of letters, as opposed to using 'Content here, content
                             here',
                             making it look like readable English.
                         </p>
-                        <p class="des">
+                        <p>
                             Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
                             model
                             text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
@@ -299,6 +307,7 @@
     <!-- --------------------------------------------------- -->
     <!--                      ScriptJS                       -->
     <!-- --------------------------------------------------- -->
+    <script src="js/main.min.js"></script>
     <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
 
