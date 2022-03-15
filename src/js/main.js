@@ -34,8 +34,6 @@ function onChangeLanguage() {
             $(".lang__icon.vn").addClass("--hidden");
             $(".lang__icon.en").removeClass("--hidden");
         }
-
-
     });
 }
 
