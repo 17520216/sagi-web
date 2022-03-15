@@ -1,5 +1,5 @@
 .banner {
-  height: 700px;
+  height: 800px;
   background: #161616;
   overflow: hidden;
   padding-top: 70px;
@@ -172,14 +172,16 @@
     width: 70%;
     .list {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 68px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       overflow: hidden;
+      &.--top {
+        padding-bottom: 76px;
+      }
       .items {
         text-align: center;
-        width: calc(100% / 3);
+        width: 100%;
+        margin-bottom: 68px;
         .avt {
           width: 183px;
           height: 183px;
@@ -450,6 +452,15 @@
   }
 }
 
+
+
+@include lg {
+  @include maxH(900px) {
+    .banner {
+      height: 100vh;
+    }
+  }
+}
 @include xs {
   .title-section {
     font-size: 2.5rem;
@@ -566,8 +577,9 @@
       gap: 16px;
       .list {
         margin-top: 20px;
-        flex-direction: column;
         padding-bottom: 32px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0 12px;
         .items {
           width: 100%;
           margin-bottom: 30px;
@@ -635,10 +647,9 @@
       padding-bottom: 44px;
     }
   }
-}
-
-@media only screen and (max-height: 667px) {
-  .banner {
-    height: 100vh;
+  @include maxH(900px) {
+    .banner {
+      height: auto;
+    }
   }
 }
