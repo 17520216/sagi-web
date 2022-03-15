@@ -34,8 +34,6 @@ function onChangeLanguage() {
             $(".lang__icon.vn").addClass("--hidden");
             $(".lang__icon.en").removeClass("--hidden");
         }
-
-
     });
 }
 
@@ -115,7 +113,7 @@ function handleScrollMenu() {
                 menuList[index].classList.remove('active');
             }
             if ($window.scrollTop() + $window.height() > $document.height() - 100) {
-                menuList[index].classList.remove('active'); 
+                menuList[index].classList.remove('active');
                 menuList[8].classList.add('active');
             }
 
