@@ -11,7 +11,6 @@ $(document).ready(function () {
 
     let navMobile = document.querySelector('nav');
 
-
     $('.main').imagesLoaded({ background: true }, function () {
         navMobile.classList.remove('--hidden');
     });
@@ -92,7 +91,7 @@ function handleScrollMenu() {
         menuItem.addEventListener('click', function (e) {
             e.preventDefault();
             $('html, body')[0].scrollTo({
-                top: section.offsetTop - heightHeader - 60,
+                top: section.offsetTop - heightHeader - 10,
             });
 
             removeClassActiveMenu(menuList);
