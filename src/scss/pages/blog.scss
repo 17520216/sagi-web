@@ -1,44 +1,9 @@
 .blog {
   padding-top: 213px;
+
   .main-blog {
     padding-bottom: 50px;
     border-bottom: 1px solid #525252;
-    .thumb {
-      img {
-        width: 100%;
-      }
-    }
-    img {
-      height: auto;
-      margin: auto;
-      margin-bottom: 58px;
-    }
-
-    .nameBlog {
-      @include text($font-pn-l, #ffffff, 1.4rem, 400, uppercase, 19px);
-      text-align: center;
-      padding-bottom: 27px;
-    }
-    .titleBlog {
-      @include text($font-pn-l, #ffffff, 4.2rem, 400, none, 63px);
-      padding-bottom: 44px;
-      text-align: center;
-    }
-
-    p {
-      @include text($font-pn-l, #ffffff, 1.6rem, null, inherit, 28px);
-      margin-bottom: 20px;
-    }
-    ul {
-      list-style: disc;
-      padding-left: 42px;
-      padding-bottom: 10px;
-      li {
-        @include text($font-pn-l, #ffffff, 1.6rem, null, inherit, 28px);
-        list-style-position: inside;
-      }
-    }
-
     h1 {
       @include text($font-pn-b, #ffffff, 4.2rem, 600, inherit, 63px);
     }
@@ -57,6 +22,48 @@
     }
     h6 {
       @include text($font-pn-b, #ffffff, 1.6rem, 600, inherit, 24px);
+    }
+    .content {
+      h2,
+      h1 {
+        margin-bottom: 7px;
+        font-family: "EXtra-Bold";
+      }
+      .thumb {
+        img {
+          width: 100%;
+        }
+      }
+      img {
+        height: auto;
+        margin: auto;
+        margin-bottom: 58px;
+      }
+
+      .nameBlog {
+        @include text($font-pn-l, #ffffff, 1.4rem, 400, uppercase, 19px);
+        text-align: center;
+        padding-bottom: 27px;
+      }
+      .titleBlog {
+        @include text($font-pn-l, #ffffff, 4.2rem, 400, none, 63px);
+        padding-bottom: 44px;
+        text-align: center;
+      }
+
+      p {
+        @include text($font-pn-l, #ffffff, 1.6rem, null, inherit, 28px);
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style: disc;
+        padding-left: 42px;
+        padding-bottom: 10px;
+        li {
+          @include text($font-pn-l, #ffffff, 1.6rem, null, inherit, 28px);
+          list-style-position: inside;
+        }
+      }
     }
   }
   .back {
