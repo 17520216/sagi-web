@@ -3,14 +3,15 @@
   .main-blog {
     padding-bottom: 50px;
     border-bottom: 1px solid #525252;
+    .thumb {
+      img {
+        width: 100%;
+      }
+    }
     img {
-      width: 100%;
+      height: auto;
+      margin: auto;
       margin-bottom: 58px;
-      // &.img-2 {
-      //   max-width: 80%;
-      //   margin: auto;
-      //   padding-bottom: 50px;
-      // }
     }
     h3 {
       @include text($font-pn-l, #ffffff, 1.4rem, 400, uppercase, 19px);
@@ -19,8 +20,8 @@
     }
     h2 {
       @include text($font-pn-l, #ffffff, 4.2rem, 400, none, 63px);
-      text-align: center;
       padding-bottom: 44px;
+      text-align: center;
     }
 
     h4 {
@@ -38,6 +39,32 @@
       li {
         @include text($font-pn-l, #ffffff, 1.6rem, null, inherit, 28px);
         list-style-position: inside;
+      }
+    }
+
+    .tag {
+      h1 {
+        @include text($font-pn-b, #ffffff, 4.2rem, 600, inherit, 63px);
+      }
+      h2 {
+        @include text($font-pn-b, #ffffff, 3.4rem, 600, inherit, 54px);
+        text-align: left;
+        padding-bottom: 0px;
+      }
+      h3 {
+        @include text($font-pn-b, #ffffff, 3rem, 600, inherit, 45px);
+        text-align: left;
+        padding-bottom: 0px;
+      }
+      h4 {
+        @include text($font-pn-b, #ffffff, 2.6rem, 600, inherit, 39px);
+        margin: 0px;
+      }
+      h5 {
+        @include text($font-pn-b, #ffffff, 2rem, 600, inherit, 30px);
+      }
+      h6 {
+        @include text($font-pn-b, #ffffff, 1.6rem, 600, inherit, 24px);
       }
     }
   }
