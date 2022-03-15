@@ -18,7 +18,6 @@
 }
 
 .btn {
-  @include text($font-pn-eb, #161616, 1.6rem, 400, capitalize, 30px);
   padding: 10px 90px;
   background: #f0f0f0;
   border: 1px solid #f0f0f0;
@@ -27,8 +26,13 @@
   cursor: pointer;
   width: max-content;
   @include transition($t);
+  a {
+    @include text($font-pn-eb, #161616, 1.6rem, 400, capitalize, 30px);
+  }
   &:hover {
-    color: #fff;
+    a {
+      color: #fff;
+    }
     background: #000;
   }
 }
