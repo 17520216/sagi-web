@@ -9,10 +9,13 @@ $(document).ready(function () {
     onChangeLanguage();
     handleMenuMobile();
 
+    let loading = document.querySelector('.loading');
+
     let navMobile = document.querySelector('nav');
 
-    $('.main').imagesLoaded({ background: true }, function () {
+    $('body').imagesLoaded({ background: true }, function () {
         navMobile.classList.remove('--hidden');
+        loading.classList.remove('--show');
     });
 
 });
