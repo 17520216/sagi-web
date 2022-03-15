@@ -5,30 +5,30 @@
     padding-bottom: 50px;
     border-bottom: 1px solid #525252;
     h1 {
-      @include text($font-pn-b, #ffffff, 4.2rem, 600, inherit, 63px);
+      @include text($font-pn-bt, #ffffff, 4.2rem, 600, inherit, 63px);
+      margin: 4px;
     }
     h2 {
-      @include text($font-pn-b, #ffffff, 3.4rem, 600, inherit, 54px);
+      @include text($font-pn-bt, #ffffff, 3.4rem, 600, inherit, 54px);
+      margin: 4px;
     }
     h3 {
-      @include text($font-pn-b, #ffffff, 3rem, 600, inherit, 45px);
+      @include text($font-pn-bt, #ffffff, 3rem, 600, inherit, 45px);
+      margin: 4px;
     }
     h4 {
-      @include text($font-pn-b, #ffffff, 2.6rem, 600, inherit, 39px);
-      margin: 0px;
+      @include text($font-pn-bt, #ffffff, 2.6rem, 600, inherit, 39px);
+      margin: 4px;
     }
     h5 {
-      @include text($font-pn-b, #ffffff, 2rem, 600, inherit, 30px);
+      @include text($font-pn-bt, #ffffff, 2rem, 600, inherit, 30px);
+      margin: 4px;
     }
     h6 {
-      @include text($font-pn-b, #ffffff, 1.6rem, 600, inherit, 24px);
+      @include text($font-pn-bt, #ffffff, 1.6rem, 600, inherit, 24px);
+      margin: 4px;
     }
     .content {
-      h2,
-      h1 {
-        margin-bottom: 7px;
-        font-family: "EXtra-Bold";
-      }
       .thumb {
         img {
           width: 100%;
