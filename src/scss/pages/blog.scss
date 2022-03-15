@@ -16,27 +16,27 @@
     }
     h1 {
       @include text($font-pn-bt, #ffffff, 4.2rem, 600, inherit, 63px);
-      margin-bottom: 4px;
+      margin-bottom: 20px;
     }
     h2 {
       @include text($font-pn-bt, #ffffff, 3.4rem, 600, inherit, 54px);
-      margin-bottom: 4px;
+      margin-bottom: 20px;
     }
     h3 {
       @include text($font-pn-bt, #ffffff, 3rem, 600, inherit, 45px);
-      margin-bottom: 4px;
+      margin-bottom: 20px;
     }
     h4 {
       @include text($font-pn-bt, #ffffff, 2.6rem, 600, inherit, 39px);
-      margin-bottom: 4px;
+      margin-bottom: 20px;
     }
     h5 {
       @include text($font-pn-bt, #ffffff, 2rem, 600, inherit, 30px);
-      margin-bottom: 4px;
+      margin-bottom: 20px;
     }
     h6 {
       @include text($font-pn-bt, #ffffff, 1.6rem, 600, inherit, 24px);
-      margin-bottom: 4px;
+      margin-bottom: 20px;
     }
 
     .thumb {
