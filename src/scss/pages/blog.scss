@@ -13,21 +13,18 @@
       margin: auto;
       margin-bottom: 58px;
     }
-    h3 {
+
+    .nameBlog {
       @include text($font-pn-l, #ffffff, 1.4rem, 400, uppercase, 19px);
       text-align: center;
       padding-bottom: 27px;
     }
-    h2 {
+    .titleBlog {
       @include text($font-pn-l, #ffffff, 4.2rem, 400, none, 63px);
       padding-bottom: 44px;
       text-align: center;
     }
 
-    h4 {
-      @include text($font-pn-eb, #ffffff, 3.6rem, 700, none, 174.5%);
-      margin: 7px 0;
-    }
     p {
       @include text($font-pn-l, #ffffff, 1.6rem, null, inherit, 28px);
       margin-bottom: 20px;
@@ -42,30 +39,24 @@
       }
     }
 
-    .tag {
-      h1 {
-        @include text($font-pn-b, #ffffff, 4.2rem, 600, inherit, 63px);
-      }
-      h2 {
-        @include text($font-pn-b, #ffffff, 3.4rem, 600, inherit, 54px);
-        text-align: left;
-        padding-bottom: 0px;
-      }
-      h3 {
-        @include text($font-pn-b, #ffffff, 3rem, 600, inherit, 45px);
-        text-align: left;
-        padding-bottom: 0px;
-      }
-      h4 {
-        @include text($font-pn-b, #ffffff, 2.6rem, 600, inherit, 39px);
-        margin: 0px;
-      }
-      h5 {
-        @include text($font-pn-b, #ffffff, 2rem, 600, inherit, 30px);
-      }
-      h6 {
-        @include text($font-pn-b, #ffffff, 1.6rem, 600, inherit, 24px);
-      }
+    h1 {
+      @include text($font-pn-b, #ffffff, 4.2rem, 600, inherit, 63px);
+    }
+    h2 {
+      @include text($font-pn-b, #ffffff, 3.4rem, 600, inherit, 54px);
+    }
+    h3 {
+      @include text($font-pn-b, #ffffff, 3rem, 600, inherit, 45px);
+    }
+    h4 {
+      @include text($font-pn-b, #ffffff, 2.6rem, 600, inherit, 39px);
+      margin: 0px;
+    }
+    h5 {
+      @include text($font-pn-b, #ffffff, 2rem, 600, inherit, 30px);
+    }
+    h6 {
+      @include text($font-pn-b, #ffffff, 1.6rem, 600, inherit, 24px);
     }
   }
   .back {
