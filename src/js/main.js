@@ -72,6 +72,9 @@ function handleScrollMenu() {
 
     let sectionList = [];
 
+    const url = window.location;
+
+    if (window.location.href.includes("blog")) return;
 
     menuMobile.forEach((menuItem) => {
         let href = menuItem.getAttribute('href').slice(1);
@@ -86,6 +89,7 @@ function handleScrollMenu() {
             $('nav').removeClass('active');
         });
     });
+
 
     menuList.forEach((menuItem, index) => {
         let href = menuItem.getAttribute('href').slice(1);
@@ -115,7 +119,7 @@ function handleScrollMenu() {
                 menuList[index].classList.remove('active');
             }
             if ($window.scrollTop() + $window.height() > $document.height() - 100) {
-                menuList[index].classList.remove('active'); 
+                menuList[index].classList.remove('active');
                 menuList[8].classList.add('active');
             }
 
