@@ -20,7 +20,7 @@
     @include flex(null, center, center);
     @include positionCenter("left");
     &-item {
-      margin: 0 16px;
+      margin: 0 13px;
       a {
         position: relative;
         padding-bottom: 2px;
@@ -68,6 +68,7 @@
       &__icon {
         object-fit: contain;
         margin-left: 10px;
+        display: block;
       }
       &__list {
         @include position(absolute, 180%, 0);
