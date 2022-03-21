@@ -70,19 +70,20 @@ function handleScrollMenu() {
 
     let sectionList = [];
 
+    const url = window.location;
 
-    if (window.location.href.includes("blog") || window.location.href.includes("job"))  return;
+    if (window.location.href.includes("blog") || window.location.href.includes("job")) return;
 
     menuMobile.forEach((menuItem) => {
         let href = menuItem.getAttribute('href').slice(1);
         let section = document.querySelector(`.${href}`);
         menuItem.addEventListener('click', function (e) {
-            if (href === "job.html") return;
 
+            if (href.includes("job")) return;
             e.preventDefault();
 
             $('html, body')[0].scrollTo({
-                top: section?.offsetTop + heightHeader - 200,
+                top: section.offsetTop + heightHeader - 200,
             });
             $('.header__right .hamburger').removeClass('active');
             $('nav').removeClass('active');
@@ -93,10 +94,9 @@ function handleScrollMenu() {
     menuList.forEach((menuItem, index) => {
         let href = menuItem.getAttribute('href').slice(1);
         let section = document.querySelector(`.${href}`);
-
         sectionList.push(section);
         menuItem.addEventListener('click', function (e) {
-            if (href === "job.html") return;
+            if (href.includes("job")) return;
             e.preventDefault();
             $('html, body')[0].scrollTo({
                 top: section.offsetTop - heightHeader - 10,
